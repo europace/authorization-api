@@ -1,27 +1,33 @@
 # Authorization API
-*Aktuelle Version: 0.1*
+*Aktuelle Version: 0.1* ⚠️ *ACHTUNG* Diese API befindet sich gerade in der Entwicklung.
 
-Diese Dokumenation beschreibt den OAuth2 Flow um sich an der Europace Plattform zu autorisieren. Am Token-Enpoint kannst Du einen Token-Request ausführen um ein Access-Token zu erhalten.
 
-⚠️ *ACHTUNG* Diese API befindet sich gerade in der Entwicklung.
+## Grundlegendes
+Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die Registrierung muss von einem Admin im Partnermanagement durchgeführt werden.
 
-# Was ist OAuth2?
-OAuth 2.0 is an authorization protocol that gives an API client limited access to user data on a web server. GitHub, Google, and Facebook APIs notably use it. OAuth relies on authentication scenarios called flows, which allow the resource owner (user) to share the protected content from the resource server without sharing their credentials. For that purpose, an OAuth 2.0 server issues access tokens that the client applications can use to access protected resources on behalf of the resource owner. For more information about OAuth 2.0, see oauth.net and RFC 6749.
+Clients agieren im Namen von Nutzern oder Organisationen, die im Partnermanagement hinterlegt sind. Ein registrierter Client wird durch eine `Client ID` und einem `Client Secret` identifiziert: beide werden bei der Registrierung generiert.
 
-TODO:
-- Registration beschreiben
-- Kein Approval
+## Vergleich zur Vergangenheit
+In der Vergangenheit benötigte man eine `Partner ID` und einen `API Key` um die Europace APIs zu nutzen. Jeder Europace Nutzer hatte automatisch einen API Zugang und konnte die APIs nutzen, vorausgesetzt `Parnter ID`und `API Key` warum ihm bekannt. Damals erfolgte der API Zugriff immer *im Namen des Nutzers*. Dieses ist nun nicht mehr so: der API Zugriff erfolgt nun im Namen eines Clients. Es können beliebig viele Clients an einem Client registriert werden.
+
+
+## OAuth2
+Diese Dokumenation beschreibt den OAuth2 Flow um sich an der Europace Plattform zu autorisieren. Um eine API zu verwenden müssen folgende Schritte durchlaufen werden:
+1. Den Client einmalig registrieren.
+2. Mit der `Client ID` und dem `Client Secret` kannst du am Token-Endpoint einen einen Token-Request ausführen um ein Access-Token zu erhalten.
+3. Mit dem Access-Token kannst du Requests an den Europace REST APIs durchführen.
+
+
+Bei OAuth handelt es sich um ein offenes Sicherheitsprotokoll für die tokenbasierte Autorisierung und Authentifizierung im Internet. Der Prozess zum Erhalt eines Tokens nennt sich Flow. Für mehr Information zu OAuth 2.0 siehe [oauth.net](https://oauth.net).
+
 
 ### Authorization-Flows
-
-#### Client-Credentials Flow
+Von den 4 Authorization-Flows die OAuth2 spezifiziert wird aktuell nur der *Client-Credentials Flow* unterstützt.
 
 Der Client-Credentials Flow ist der einfachste Flow. Es werden die Client-Credentials direkt gegen ein
-[Access-Token](Access-Token.md#access-token) eingetauscht. Die API folgt
-[OAuth 2.0 Client Credentials Grant][RFC6749#4.4]. Client-Id und Client-Secret müssen per [HTTP Basic Auth]
+Access-Token eingetauscht. Die API folgt [OAuth 2.0 Client Credentials Grant][RFC6749#4.4]. Client-Id und Client-Secret müssen per [HTTP Basic Auth]
 übergeben werden.
 
-Client Credentials werden im Partnermanagement angelegt (TODO).
 
 Im einfachsten Fall genügt der Grant-Type als Parameter:
 
@@ -54,7 +60,7 @@ Neben zum Grant-Type werden folgende Request-Parameter unterstützt:
   - ##### Scopes (`scope`)
   "` `"-separierte Liste von Scopes. Wird ein Subject angegeben muss `impersonierung` als Scope enthalten sein.
   Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem
-  [Client-Approval](Client-Approval.md#client-approval) durch den Akteur eingeschränkt.
+  Client-Approval durch den Akteur eingeschränkt. Aktuell wird der Client-Approvall automatisch bei der Registrierung erteilt.
 - ##### Akteur (`actor`)
   Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein
   [Client-Approval](Client-Approval.md#client-approval) des Akteurs für den Client vorliegen.
@@ -75,11 +81,6 @@ Content-Type: application/json
 }
 ```
 
-#### Refresh-Token Flow
-TODO
-
-#### Authorization-Code Flow
-TODO
 
 [JWT]: https://tools.ietf.org/html/rfc7519
 [ASCII]: http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-006.pdf
