@@ -1,59 +1,60 @@
 openapi: 3.0.0
 info:
   title: Europace Authorization API
-  description: TODO
-  version: "0.1"
+  description: Mit diesem Service lassen sich Access Tokens von registrierten Clients anfordern um die Europace APIs zu verwenden.
+  version: '0.1'
+  termsOfService: TODO
+  contact:
+    name: Europace Support
+    url: 'https://developer.europace.de/'
+    email: devsupport@europace2.de
 servers:
-  - url: https://api.euoprace.de/auth
-    description: TODO
-
+  - url: 'http://ep-authorization-service.services.ps.rz-hypoport.local'
+    description: Produktiv Server
 paths:
   /access-token:
     post:
-      summary: TODO
-      description: TODO
+      summary: Endpunkt um Access Token anzufordern
+      description: Client-Id und Client-Secret müssen per HTTP Basic Auth übergeben werden.
       parameters:
-        - name: Authorization
+        - schema:
+            type: string
+            default: mytraceid123
           in: header
-          required: true
-          description: Client-Id und Client-Secret müssen per HTTP Basic Auth übergeben werden.
-          content:
-        - name: grant_type
-          in: query
-          required: true
-          description: |
-            OAuth2.0 Grant-Type, muss für den Client-Credentials-Flow client_credentials sein.
-        - name: scopes
-          in: query
-          required: true
-          description: |
-            " "-separierte Liste von Scopes. Wird ein Subject angegeben muss impersonierung als Scope enthalten sein. Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt.
-        - name: actor
-          in: query
-          required: true
-          description: |
-              Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein Client-Approval des Akteurs für den Client vorliegen.
-        - name: subject
-          in: query
-          required: true
-          description: |
-            Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
-      responses:
-        '200':    # status code
-          description: A JSON array of user names
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
+          name: X-TraceId
+          description: 'Frei-wählbarer String, um Debugging zu vereinfachen'
+      security:
+        - basicAuth: []
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                grant_type:
                   type: string
-        
+                  default: client_credentials
+                  description: Muss für den Client-Credentials-Flow `client_credentials` sein.
+                scope:
+                  type: string
+                  default: no-access impersonieren
+                  description: '" "-separierte Liste von Scopes'
+                subject:
+                  type: string
+                  description: Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
+                actor:
+                  type: string
+                  description: 'Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein Client-Approval des Akteurs für den Client vorliegen.'
+              required:
+                - grant_type
+                - scope
+      tags:
+        - authz
+      responses:
+        '200':
+          description: OK
 components:
   securitySchemes:
-    oAuth2ClientCredentials:
-      type: oauth2
-      description: See http://developers.gettyimages.com/api/docs/v3/oauth2.html
-      flows:
-        clientCredentials:
-          tokenUrl: https://api.gettyimages.com/oauth2/token/
-          scopes: {} # Getty Images does not use scopes
+    basicAuth:
+      type: http
+      scheme: basic

@@ -5,10 +5,10 @@
 ## Grundlegendes
 Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die Registrierung muss von einem Admin im Partnermanagement durchgeführt werden.
 
-Clients agieren im Namen von Nutzern oder Organisationen, die im Partnermanagement hinterlegt sind. Ein registrierter Client wird durch eine `Client ID` und einem `Client Secret` identifiziert: beide werden bei der Registrierung generiert.
+Clients agieren im Namen von Nutzern (oder Organisationen), die im Partnermanagement hinterlegt sind. Ein registrierter Client wird durch eine `Client ID` und einem `Client Secret` identifiziert: beide werden bei der Registrierung generiert.
 
 ## Vergleich zur Vergangenheit
-In der Vergangenheit benötigte man eine `Partner ID` und einen `API Key` um die Europace APIs zu nutzen. Jeder Europace Nutzer hatte automatisch einen API Zugang und konnte die APIs nutzen, vorausgesetzt `Parnter ID`und `API Key` warum ihm bekannt. Damals erfolgte der API Zugriff immer *im Namen des Nutzers*. Dieses ist nun nicht mehr so: der API Zugriff erfolgt nun im Namen eines Clients. Es können beliebig viele Clients an einem Client registriert werden.
+In der Vergangenheit benötigte man eine `Partner ID` und einen `API Key` um die Europace APIs zu nutzen. Jeder Europace Nutzer hatte automatisch einen API Zugang und konnte die APIs nutzen, vorausgesetzt `Parnter ID`und `API Key` waren ihm bekannt. Damals erfolgte der API Zugriff immer *im Namen des Nutzers*. Dieses ist nun nicht mehr so: der API Zugriff erfolgt nun im Namen eines Clients. Es können beliebig viele Clients an einem Client registriert werden.
 
 
 ## OAuth2
