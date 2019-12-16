@@ -53,6 +53,38 @@ paths:
       responses:
         '200':
           description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                  expires_in:
+                    type: string
+                  scope:
+                    type: string
+                required:
+                  - access_token
+              examples:
+                Beispiel Response:
+                  value:
+                    access_token: I6MTU3...wet46
+                    token_type: BEARER
+                    expires_in: 3599
+                    scope: no-access
+        '400':
+          description: Bad Request. zB nicht existierende Scopes angefordert
+        '401':
+          description: 'Unauthorized. Autorisierungsfehler bei den Client Credentials '
+        '429':
+          description: Too Many Requests. Rate-Limit überschritten.
+        '500':
+          description: Internal Server Error. Autsch.
+        '503':
+          description: Service Unavailable
 components:
   securitySchemes:
     basicAuth:
