@@ -1,5 +1,5 @@
 # Authorization API
-Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Europace APIs verwendet werden können.
+Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Europace-APIs verwendet werden können.
 
 ⚠️ *ACHTUNG* Diese API ist neu und befindet sich gerade in der Pilotierung. An folegenden APIs kann das neue Access Token schon verwendet werden
 * [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
