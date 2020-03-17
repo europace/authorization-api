@@ -1,9 +1,13 @@
 # Authorization API
-*Aktuelle Version: 0.1* ⚠️ *ACHTUNG* Diese API befindet sich gerade in der Entwicklung.
+Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Europace-APIs verwendet werden können.
+
+⚠️ *ACHTUNG* Diese API ist neu und befindet sich gerade in der Pilotierung. An folgenden APIs kann das neue Access Token schon verwendet werden:
+* [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
+* [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
 
 
 ## Grundlegendes
-Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die Registrierung muss von einem Admin im Partnermanagement durchgeführt werden.
+Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die Registrierung muss von einem Admin im Partnermanagement durchgeführt werden. Eine Anleitung dafür [befindet sich hier](https://europace2.zendesk.com/hc/de/articles/360012514780).
 
 Clients agieren im Namen von Nutzern (oder Organisationen), die im Partnermanagement hinterlegt sind. Ein registrierter Client wird durch eine `Client ID` und einem `Client Secret` identifiziert: beide werden bei der Registrierung generiert.
 
