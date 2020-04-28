@@ -21,7 +21,7 @@ Es können beliebig viele Clients an einer Plakette registriert werden.
 ## OAuth2
 Diese Dokumenation beschreibt den OAuth2 Flow um sich an der Europace Plattform zu autorisieren. Um eine API zu verwenden müssen folgende Schritte durchlaufen werden:
 1. Den Client einmalig registrieren.
-2. Mit der `Client ID` und dem `Client Secret` kannst du am Token-Endpoint einen einen Token-Request ausführen um ein Access-Token zu erhalten.
+2. Mit der `Client ID` und dem `Client Secret` kannst du am Token-Endpoint einen Token-Request ausführen, um ein Access-Token zu erhalten.
 3. Mit dem Access-Token kannst du Requests an den Europace REST APIs durchführen.
 
 
