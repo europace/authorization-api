@@ -39,7 +39,7 @@ Access-Token eingetauscht. Die API folgt [OAuth 2.0 Client Credentials Grant][RF
 Im einfachsten Fall genügt der Grant-Type als Parameter:
 
 ```http
-POST /access-token HTTP/1.1
+POST /auth/access-token HTTP/1.1
 Host: api.europace.de
 Authorization: Basic VVNRNEtNWTRZSFZBWE1YRDo0SmpDS3hRNVV6SVFNZDNoU2tWMEpCYjA=
 Content-Type: application/x-www-form-urlencoded
@@ -50,7 +50,7 @@ grant_type=client_credentials
 oder als cURL-Aufruf:
 
 ```bash
-curl "https://api.europace.de/access-token" \
+curl "https://api.europace.de/auth/access-token" \
   -u USQ4KMY4YHVAXMXD:4JjCKxQ5UzIQMd3hSkV0JBb0 \
   -F grant_type=client_credentials
 ```
