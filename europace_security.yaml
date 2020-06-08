@@ -6,7 +6,9 @@
 # Weiterführende Dokumentation
 
 type: oauth2
-      description: "This API uses OAuth 2 with the client credentials flow. [More info](https://auth0.com/docs/flows/concepts/client-credentials). Der Europace Authorization Server ist erreichbar unter https://api.europace.de/.well-known/oauth-authorization-server."
+      description: |
+            This API uses OAuth 2 with the client credentials flow. [More info](https://auth0.com/docs/flows/concepts/client-credentials). 
+            Der Europace Authorization Server ist erreichbar unter https://api.europace.de/.well-known/oauth-authorization-server."
       flows:
         clientCredentials:
           tokenUrl: https://api.europace.de/auth/token
