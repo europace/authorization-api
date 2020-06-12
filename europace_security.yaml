@@ -15,7 +15,7 @@ flows:
     scopes: # Siehe auch https://swagger.io/specification/ (OAuth Flow Object - Scopes)
       partner:plakette:anlegen: |
         ## Darf neue Plaketten anlegen.
-        TODO Beschreibung
+        TODO Beschreibung 
       partner:plakette:löschen: |
         ## Darf Plaketten löschen
         TODO Beschreibung
@@ -43,3 +43,14 @@ flows:
       reporting:produktanbieterreport:lesen: |
         ## Darf im Partnermanagement den produktanbieterreport runterladen
         TODO Beschreibung
+      baufi-vertrieb:echtgeschaeft: |
+        ## Baufinanzierung-Echtgeschäft bearbeiten
+      baufi-vertrieb:vorgang:lesen: |
+        ## Baufinanzierungsvorgänge lesen
+    requiredAuthorities:
+      baufi-vertrieb:echtgeschaeft: 
+        - BS_SICHTBAR
+        - ECHTES_GESCHAEFT_ERLAUBT
+      baufi-vertrieb:vorgang:lesen:
+        - BS_SICHTBAR
+        
