@@ -3,8 +3,11 @@ Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Euro
 
 ⚠️ *ACHTUNG* Diese API ist neu und befindet sich gerade in der Pilotierung. An folgenden APIs kann das neue Access Token schon verwendet werden:
 * [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
+* [KreditSmart KEX Vorgang Import API](https://github.com/europace/kex-vorgang-import-api)
 * [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
+* [KreditSmart KEX Vorgang Update API](https://github.com/europace/kex-vorgang-update-api)
 * [KreditSmart KEX Angebote API](https://github.com/europace/kex-angebote-api)
+* [KreditSmart KEX Antragsstatus API](https://github.com/europace/kex-antragsstatus-api)
 
 
 ## Grundlegendes
