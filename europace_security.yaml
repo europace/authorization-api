@@ -66,14 +66,15 @@ flows:
         ## Kreditsmartanträge schreiben
       privatkredit:vorgang:lesen: |
         ## Kreditsmartvorgänge lesen
+      privatkredit:vorgang:schreiben: |
+        ## Kreditsmartvorgänge schreiben
         
       impersonieren: |
         ## Impersonieren
       openid: |
-        ## enutzer-Login durchführen
+        ## Benutzer-Login durchführen
       profile: |
         ## Benutzerprofil lesen
-
         
     requiredAuthorities:
       baufi-vertrieb:echtgeschaeft: 
@@ -98,7 +99,9 @@ flows:
         - KREDIT_SMART_SICHTBAR
       privatkredit:vorgang:lesen:
         - KREDIT_SMART_SICHTBAR
-       
+      privatkredit:vorgang:schreiben: 
+        - KREDIT_SMART_SICHTBAR
+        
       impersonieren:
         - DARF_EINSTELLUNGEN_OEFFNEN
        
