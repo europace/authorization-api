@@ -16,7 +16,7 @@ flows:
       partner:plakette:anlegen: |
         ## Darf neue Plaketten anlegen.
         TODO Beschreibung 
-      partner:plakette:löschen: |
+      partner:plakette:loeschen: |
         ## Darf Plaketten löschen
         TODO Beschreibung
       partner:plakette:lesen: |
