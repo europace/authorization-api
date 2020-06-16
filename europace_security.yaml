@@ -70,7 +70,8 @@ flows:
         ## Kreditsmartvorgänge schreiben
         
       impersonieren: |
-        ## Impersonieren
+        ## Darf Impersonieren
+        Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.
       openid: |
         ## Benutzer-Login durchführen
       profile: |
