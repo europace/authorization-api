@@ -13,16 +13,10 @@ flows:
   clientCredentials:
     tokenUrl: https://api.europace.de/auth/token
     scopes: # Siehe auch https://swagger.io/specification/ (OAuth Flow Object - Scopes)
-      partner:plakette:anlegen: |
-        ## Darf neue Plaketten anlegen.
-        TODO Beschreibung 
-      partner:plakette:loeschen: |
-        ## Darf Plaketten löschen
-        TODO Beschreibung
-      partner:plakette:lesen: |
+      partner:stammdaten:lesen: |
         ## Darf Partner-Daten lesen
         TODO Beschreibung
-      partner:plakette:schreiben: |
+      partner:stammdaten:schreiben: |
         ## Darf Partner-Daten schreiben
         TODO Beschreibung
       partner:beziehungen:lesen: |
@@ -30,12 +24,6 @@ flows:
         TODO Beschreibung
       partner:beziehungen:schreiben: |
         ## Darf Beziehungen zwischen Partnern schreiben
-        TODO Beschreibung
-      partner:rechte:lesen: |
-        ## Darf Rechte eines Partners lesen
-        TODO Beschreibung
-      partner:rechte:schreiben: |
-        ## Darf Rechte eines Partners schreiben
         TODO Beschreibung
         
       reporting:rohdaten:lesen: |
@@ -77,6 +65,17 @@ flows:
         ## Benutzerprofil lesen
         
     requiredAuthorities:
+      partner:stammdaten:lesen:
+        - DARF_EINSTELLUNGEN_OEFFNEN
+      partner:stammdaten:schreiben:
+        - DARF_EINSTELLUNGEN_OEFFNEN
+        - DARF_ORGA_EINHEITEN_ANLEGEN
+      partner:beziehungen:lesen:
+        - DARF_EINSTELLUNGEN_OEFFNEN
+      partner:beziehungen:schreiben:
+        - DARF_EINSTELLUNGEN_OEFFNEN
+        - DARF_ORGA_EINHEITEN_ANLEGEN
+    
       baufi-vertrieb:echtgeschaeft: 
         - BS_SICHTBAR
         - ECHTES_GESCHAEFT_ERLAUBT
