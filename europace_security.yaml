@@ -37,14 +37,14 @@ flows:
       partner:rechte:schreiben: |
         ## Darf Rechte eines Partners schreiben
         TODO Beschreibung
-        
+
       reporting:rohdaten:lesen: |
         ## Darf im Partnermanagement den Rohdaten-Report runterladen
         TODO Beschreibung
       reporting:produktanbieterreport:lesen: |
         ## Darf im Partnermanagement den produktanbieterreport runterladen
         TODO Beschreibung
-        
+
       baufi-vertrieb:echtgeschaeft: |
         ## Baufinanzierung-Echtgeschäft bearbeiten
       baufi-vertrieb:vorgang:lesen: |
@@ -59,7 +59,21 @@ flows:
         ## Baufinanzierungsanträge lesen
       baufinanzierung:antrag:schreiben: |
         ## Baufinanzierungsanträge schreiben
-      
+      baufinanzierung:produktkonfiguration:lesen: |
+        ## Produktkonfiguration lesen
+      baufinanzierung:produktkonfiguration:schreiben: |
+        ## Produktkonfiguration schreiben
+      baufinanzierung:produktkonfiguration:freigeben: |
+        ## Produktkonfiguration freigeben
+      baufinanzierung:produkt:lesen: |
+        ## Produkt lesen
+      baufinanzierung:produkt:schreiben: |
+        ## Produkt schreiben
+      baufinanzierung:produktanbieter:lesen: |
+        ## Produktanbieter lesen
+      baufinanzierung:produktanbieter:schreiben: |
+        ## Produktanbieter schreiben
+
       privatkredit:angebot:ermitteln: |
         ## Kreditsmartangebote ermitteln
       privatkredit:antrag:schreiben: |
@@ -68,16 +82,16 @@ flows:
         ## Kreditsmartvorgänge lesen
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
-        
+
       impersonieren: |
         ## Impersonieren
       openid: |
         ## Benutzer-Login durchführen
       profile: |
         ## Benutzerprofil lesen
-        
+
     requiredAuthorities:
-      baufi-vertrieb:echtgeschaeft: 
+      baufi-vertrieb:echtgeschaeft:
         - BS_SICHTBAR
         - ECHTES_GESCHAEFT_ERLAUBT
       baufi-vertrieb:vorgang:lesen:
@@ -92,16 +106,16 @@ flows:
         - BS_SICHTBAR
       baufinanzierung:antrag:schreiben:
         - BS_SICHTBAR
-        
+
       privatkredit:angebot:ermitteln:
         - KREDIT_SMART_SICHTBAR
       privatkredit:antrag:schreiben:
         - KREDIT_SMART_SICHTBAR
       privatkredit:vorgang:lesen:
         - KREDIT_SMART_SICHTBAR
-      privatkredit:vorgang:schreiben: 
+      privatkredit:vorgang:schreiben:
         - KREDIT_SMART_SICHTBAR
-        
+
       impersonieren:
         - DARF_EINSTELLUNGEN_OEFFNEN
        
