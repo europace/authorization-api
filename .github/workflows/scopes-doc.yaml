@@ -19,7 +19,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyyaml
         
-      - name: Check yaml files
+      - name: Transform YAML to Doc
         run: |
           python .github/workflows/scripts/scopes-doc.py -i europace_security.yaml > docs/scopes.md
         
