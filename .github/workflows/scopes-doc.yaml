@@ -1,4 +1,4 @@
-name: "Check yaml with Linter"
+name: "Create Scopes Doc"
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
         
       - name: Check yaml files
         run: |
-          yamllint -c .github/workflows/config/yamllint.yaml --no-warnings .
+          python .github/workflows/scripts/scopes-doc.py -i europace_security.yaml > docs/scopes.md
         
       - name: Commit files
         run: |
