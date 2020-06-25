@@ -13,6 +13,9 @@ flows:
   clientCredentials:
     tokenUrl: https://api.europace.de/auth/token
     scopes: # Siehe auch https://swagger.io/specification/ (OAuth Flow Object - Scopes)
+    partner:plakette:aportieren: |
+        ## Darf neue Plaketten anlegen.
+        TODO Beschreibung
       partner:plakette:anlegen: |
         ## Darf neue Plaketten anlegen.
         TODO Beschreibung 
