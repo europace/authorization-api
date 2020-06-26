@@ -1,0 +1,8 @@
+# This is a configuration file for yamllint!
+# It extends the default conf by adjusting some options.
+
+extends: default
+
+rules:
+  trailing-spaces: disable
+  line-length: disable
