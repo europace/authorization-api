@@ -9,7 +9,7 @@ def transformScopesToMarkDown(input):
 
     intro="""# Scopes für OAuth Clients bei Europace
 
-Mit Hilfe der Scopes kannst du genau angeben, welche Art von Zugriff du benötigst. Scopes beschränken den Zugriff mittels OAuth-Tokens. Sie gewähren keine zusätzlichen Berechtigungen über die Rechte des Nutzers hinaus.
+Mit Hilfe der Scopes kannst du genau angeben, welche Art von Zugriff du benötigst. Scopes beschränken den Zugriff mittels OAuth-Token. Sie gewähren keine zusätzlichen Berechtigungen über die Rechte des Nutzers hinaus.
 
 ## Verfügbare Scopes
 
