@@ -25,6 +25,13 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufi-vertrieb:vorgang:loeschen ` |   Baufinanzierungsvorgänge löschen  |
 | ` baufinanzierung:antrag:lesen ` |   Baufinanzierungsanträge lesen  |
 | ` baufinanzierung:antrag:schreiben ` |   Baufinanzierungsanträge schreiben  |
+| ` baufinanzierung:produktkonfiguration:lesen ` |   Produktkonfiguration lesen  |
+| ` baufinanzierung:produktkonfiguration:schreiben ` |   Produktkonfiguration schreiben  |
+| ` baufinanzierung:produktkonfiguration:freigeben ` |   Produktkonfiguration freigeben  |
+| ` baufinanzierung:produkt:lesen ` |   Produkt lesen  |
+| ` baufinanzierung:produkt:schreiben ` |   Produkt schreiben  |
+| ` baufinanzierung:produktanbieter:lesen ` |   Produktanbieter lesen  |
+| ` baufinanzierung:produktanbieter:schreiben ` |   Produktanbieter schreiben  |
 | ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln  |
 | ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben  |
 | ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen  |
