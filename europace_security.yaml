@@ -55,6 +55,8 @@ flows:
         ## Baufinanzierungsvorgänge anlegen
       baufi-vertrieb:vorgang:loeschen: |
         ## Baufinanzierungsvorgänge löschen
+      baufinanzierung:ereignis:lesen: |
+        ## Baufinanzierungsereignisse lesen
       baufinanzierung:antrag:lesen: |
         ## Baufinanzierungsanträge lesen
       baufinanzierung:antrag:schreiben: |
@@ -101,6 +103,8 @@ flows:
       baufi-vertrieb:vorgang:anlegen:
         - BS_SICHTBAR
       baufi-vertrieb:vorgang:loeschen:
+        - BS_SICHTBAR
+      baufinanzierung:ereignis:lesen:
         - BS_SICHTBAR
       baufinanzierung:antrag:lesen:
         - BS_SICHTBAR
