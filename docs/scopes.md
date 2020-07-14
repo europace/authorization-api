@@ -23,6 +23,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufi-vertrieb:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
 | ` baufi-vertrieb:vorgang:anlegen ` |   Baufinanzierungsvorgänge anlegen  |
 | ` baufi-vertrieb:vorgang:loeschen ` |   Baufinanzierungsvorgänge löschen  |
+| ` baufinanzierung:ereignis:lesen ` |   Baufinanzierungsereignisse lesen  |
 | ` baufinanzierung:antrag:lesen ` |   Baufinanzierungsanträge lesen  |
 | ` baufinanzierung:antrag:schreiben ` |   Baufinanzierungsanträge schreiben  |
 | ` baufinanzierung:produktkonfiguration:lesen ` |   Produktkonfiguration lesen  |
