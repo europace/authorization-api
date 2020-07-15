@@ -55,6 +55,8 @@ flows:
         ## Baufinanzierungsvorgänge anlegen
       baufi-vertrieb:vorgang:loeschen: |
         ## Baufinanzierungsvorgänge löschen
+      baufinanzierung:angebot:ermitteln: |
+        ## Baufinanzierungsangebote ermitteln
       baufinanzierung:ereignis:lesen: |
         ## Baufinanzierungsereignisse lesen
       baufinanzierung:antrag:lesen: |
