@@ -45,16 +45,12 @@ flows:
         ## Darf im Partnermanagement den produktanbieterreport runterladen
         TODO Beschreibung
 
-      baufi-vertrieb:echtgeschaeft: |
+      baufinanzierung:echtgeschaeft: |
         ## Baufinanzierung-Echtgeschäft bearbeiten
-      baufi-vertrieb:vorgang:lesen: |
+      baufinanzierung:vorgang:lesen: |
         ## Baufinanzierungsvorgänge lesen
-      baufi-vertrieb:vorgang:schreiben: |
+      baufinanzierung:vorgang:schreiben: |
         ## Baufinanzierungsvorgänge schreiben
-      baufi-vertrieb:vorgang:anlegen: |
-        ## Baufinanzierungsvorgänge anlegen
-      baufi-vertrieb:vorgang:loeschen: |
-        ## Baufinanzierungsvorgänge löschen
       baufinanzierung:ereignis:lesen: |
         ## Baufinanzierungsereignisse lesen
       baufinanzierung:antrag:lesen: |
