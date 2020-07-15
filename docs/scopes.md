@@ -18,11 +18,9 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben TODO Beschreibung  |
 | ` reporting:rohdaten:lesen ` |   Darf im Partnermanagement den Rohdaten-Report runterladen TODO Beschreibung  |
 | ` reporting:produktanbieterreport:lesen ` |   Darf im Partnermanagement den produktanbieterreport runterladen TODO Beschreibung  |
-| ` baufi-vertrieb:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
-| ` baufi-vertrieb:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
-| ` baufi-vertrieb:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
-| ` baufi-vertrieb:vorgang:anlegen ` |   Baufinanzierungsvorgänge anlegen  |
-| ` baufi-vertrieb:vorgang:loeschen ` |   Baufinanzierungsvorgänge löschen  |
+| ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
+| ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
+| ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
 | ` baufinanzierung:ereignis:lesen ` |   Baufinanzierungsereignisse lesen  |
 | ` baufinanzierung:antrag:lesen ` |   Baufinanzierungsanträge lesen  |
 | ` baufinanzierung:antrag:schreiben ` |   Baufinanzierungsanträge schreiben  |
