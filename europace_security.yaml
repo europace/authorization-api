@@ -93,16 +93,12 @@ flows:
         ## Benutzerprofil lesen
 
     requiredAuthorities:
-      baufi-vertrieb:echtgeschaeft:
+      baufinanzierung:echtgeschaeft:
         - BS_SICHTBAR
         - ECHTES_GESCHAEFT_ERLAUBT
-      baufi-vertrieb:vorgang:lesen:
+      baufinanzierung:vorgang:lesen:
         - BS_SICHTBAR
-      baufi-vertrieb:vorgang:schreiben:
-        - BS_SICHTBAR
-      baufi-vertrieb:vorgang:anlegen:
-        - BS_SICHTBAR
-      baufi-vertrieb:vorgang:loeschen:
+      baufinanzierung:vorgang:schreiben:
         - BS_SICHTBAR
       baufinanzierung:ereignis:lesen:
         - BS_SICHTBAR
