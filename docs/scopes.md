@@ -35,6 +35,6 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben  |
 | ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen  |
 | ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben  |
-| ` impersonieren ` |   Impersonieren  |
-| ` openid ` |   Benutzer-Login durchführen  |
-| ` profile ` |   Benutzerprofil lesen  |
+| ` impersonieren ` |   Darf Impersonieren Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.  |
+| ` openid ` |   Benutzer-Login durchführen Der Client kann das Login des Benutzers auf der Plattform mittels OpenID Connect anfordern und die Identität des Benutzers abrufen.  |
+| ` profile ` |   Benutzerprofil lesen Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.  |
