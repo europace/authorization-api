@@ -5,6 +5,7 @@
 Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Europace-APIs verwendet werden können.
 
 Diese API ist neu und es sind noch nicht alle Europace Services auf das neue Access Token umgestellt. An folgenden APIs kann das neue Access Token schon verwendet werden:
+* [BaufiSmart Anträge API](https://github.com/europace/baufismart-antraege-api)
 * [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
 * [KreditSmart KEX Vorgang Import API](https://github.com/europace/kex-vorgang-import-api)
 * [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
