@@ -82,12 +82,15 @@ flows:
         ## Kreditsmartvorgänge schreiben
 
       impersonieren: |
-        ## Impersonieren
+        ## Darf Impersonieren
+        Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.
       openid: |
         ## Benutzer-Login durchführen
+        Der Client kann das Login des Benutzers auf der Plattform mittels OpenID Connect anfordern und die Identität des Benutzers abrufen.
       profile: |
         ## Benutzerprofil lesen
-
+        Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.
+     
     requiredAuthorities:
       baufinanzierung:echtgeschaeft:
         - BS_SICHTBAR
