@@ -9,7 +9,7 @@ info:
     url: 'https://developer.europace.de/'
     email: devsupport@europace2.de
 servers:
-  - url: 'http://ep-authorization-service.services.ps.rz-hypoport.local'
+  - url: 'https://api.europace.de/auth'
     description: Produktiv Server
 paths:
   /access-token:

@@ -37,29 +37,41 @@ flows:
       partner:rechte:schreiben: |
         ## Darf Rechte eines Partners schreiben
         TODO Beschreibung
-        
+
       reporting:rohdaten:lesen: |
         ## Darf im Partnermanagement den Rohdaten-Report runterladen
         TODO Beschreibung
       reporting:produktanbieterreport:lesen: |
         ## Darf im Partnermanagement den produktanbieterreport runterladen
         TODO Beschreibung
-        
-      baufi-vertrieb:echtgeschaeft: |
+
+      baufinanzierung:echtgeschaeft: |
         ## Baufinanzierung-Echtgeschäft bearbeiten
-      baufi-vertrieb:vorgang:lesen: |
+      baufinanzierung:vorgang:lesen: |
         ## Baufinanzierungsvorgänge lesen
-      baufi-vertrieb:vorgang:schreiben: |
+      baufinanzierung:vorgang:schreiben: |
         ## Baufinanzierungsvorgänge schreiben
-      baufi-vertrieb:vorgang:anlegen: |
-        ## Baufinanzierungsvorgänge anlegen
-      baufi-vertrieb:vorgang:loeschen: |
-        ## Baufinanzierungsvorgänge löschen
+      baufinanzierung:ereignis:lesen: |
+        ## Baufinanzierungsereignisse lesen
       baufinanzierung:antrag:lesen: |
         ## Baufinanzierungsanträge lesen
       baufinanzierung:antrag:schreiben: |
         ## Baufinanzierungsanträge schreiben
-      
+      baufinanzierung:produktkonfiguration:lesen: |
+        ## Produktkonfiguration lesen
+      baufinanzierung:produktkonfiguration:schreiben: |
+        ## Produktkonfiguration schreiben
+      baufinanzierung:produktkonfiguration:freigeben: |
+        ## Produktkonfiguration freigeben
+      baufinanzierung:produkt:lesen: |
+        ## Produkt lesen
+      baufinanzierung:produkt:schreiben: |
+        ## Produkt schreiben
+      baufinanzierung:produktanbieter:lesen: |
+        ## Produktanbieter lesen
+      baufinanzierung:produktanbieter:schreiben: |
+        ## Produktanbieter schreiben
+
       privatkredit:angebot:ermitteln: |
         ## Kreditsmartangebote ermitteln
       privatkredit:antrag:schreiben: |
@@ -68,7 +80,7 @@ flows:
         ## Kreditsmartvorgänge lesen
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
-        
+
       impersonieren: |
         ## Darf Impersonieren
         Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.
@@ -78,33 +90,31 @@ flows:
       profile: |
         ## Benutzerprofil lesen
         Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.
-        
+     
     requiredAuthorities:
-      baufi-vertrieb:echtgeschaeft: 
+      baufinanzierung:echtgeschaeft:
         - BS_SICHTBAR
         - ECHTES_GESCHAEFT_ERLAUBT
-      baufi-vertrieb:vorgang:lesen:
+      baufinanzierung:vorgang:lesen:
         - BS_SICHTBAR
-      baufi-vertrieb:vorgang:schreiben:
+      baufinanzierung:vorgang:schreiben:
         - BS_SICHTBAR
-      baufi-vertrieb:vorgang:anlegen:
-        - BS_SICHTBAR
-      baufi-vertrieb:vorgang:loeschen:
+      baufinanzierung:ereignis:lesen:
         - BS_SICHTBAR
       baufinanzierung:antrag:lesen:
         - BS_SICHTBAR
       baufinanzierung:antrag:schreiben:
         - BS_SICHTBAR
-        
+
       privatkredit:angebot:ermitteln:
         - KREDIT_SMART_SICHTBAR
       privatkredit:antrag:schreiben:
         - KREDIT_SMART_SICHTBAR
       privatkredit:vorgang:lesen:
         - KREDIT_SMART_SICHTBAR
-      privatkredit:vorgang:schreiben: 
+      privatkredit:vorgang:schreiben:
         - KREDIT_SMART_SICHTBAR
-        
+
       impersonieren:
         - DARF_EINSTELLUNGEN_OEFFNEN
        
