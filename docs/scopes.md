@@ -21,6 +21,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
 | ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
 | ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
+| ` baufinanzierung:angebot:ermitteln ` |   Baufinanzierungsangebote ermitteln  |
 | ` baufinanzierung:ereignis:lesen ` |   Baufinanzierungsereignisse lesen  |
 | ` baufinanzierung:antrag:lesen ` |   Baufinanzierungsanträge lesen  |
 | ` baufinanzierung:antrag:schreiben ` |   Baufinanzierungsanträge schreiben  |
