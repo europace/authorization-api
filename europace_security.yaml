@@ -26,7 +26,7 @@ flows:
         Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen
       partner:beziehungen:schreiben: |
         ## Darf Beziehungen zwischen Partnern schreiben
-        Erlaubt es unter Anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben
+        Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben
       partner:rechte:lesen: |
         ## Darf Rechte eines Partners lesen
       partner:rechte:schreiben: |
