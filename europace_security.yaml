@@ -23,7 +23,7 @@ flows:
         ## Darf Partner-Daten schreiben
       partner:beziehungen:lesen: |
         ## Darf Beziehungen zwischen Partnern lesen
-        Erlaubt es unter Anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen
+        Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen
       partner:beziehungen:schreiben: |
         ## Darf Beziehungen zwischen Partnern schreiben
         Erlaubt es unter Anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben
