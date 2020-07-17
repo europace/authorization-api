@@ -51,6 +51,8 @@ flows:
         ## Baufinanzierungsvorgänge lesen
       baufinanzierung:vorgang:schreiben: |
         ## Baufinanzierungsvorgänge schreiben
+      baufinanzierung:angebot:ermitteln: |
+        ## Baufinanzierungsangebote ermitteln
       baufinanzierung:ereignis:lesen: |
         ## Baufinanzierungsereignisse lesen
       baufinanzierung:antrag:lesen: |
