@@ -8,16 +8,16 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 
 | Name | Beschreibung  |
 | --- | ---  |
-| ` partner:plakette:anlegen ` |   Darf neue Plaketten anlegen. TODO Beschreibung  |
-| ` partner:plakette:loeschen ` |   Darf Plaketten löschen TODO Beschreibung  |
-| ` partner:plakette:lesen ` |   Darf Partner-Daten lesen TODO Beschreibung  |
-| ` partner:plakette:schreiben ` |   Darf Partner-Daten schreiben TODO Beschreibung  |
-| ` partner:beziehungen:lesen ` |   Darf Beziehungen zwischen Partnern lesen TODO Beschreibung  |
-| ` partner:beziehungen:schreiben ` |   Darf Beziehungen zwischen Partnern schreiben TODO Beschreibung  |
-| ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen TODO Beschreibung  |
-| ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben TODO Beschreibung  |
-| ` reporting:rohdaten:lesen ` |   Darf im Partnermanagement den Rohdaten-Report runterladen TODO Beschreibung  |
-| ` reporting:produktanbieterreport:lesen ` |   Darf im Partnermanagement den produktanbieterreport runterladen TODO Beschreibung  |
+| ` partner:plakette:anlegen ` |   Darf neue Plaketten anlegen.  |
+| ` partner:plakette:loeschen ` |   Darf Plaketten löschen  |
+| ` partner:plakette:lesen ` |   Darf Partner-Daten lesen  |
+| ` partner:plakette:schreiben ` |   Darf Partner-Daten schreiben  |
+| ` partner:beziehungen:lesen ` |   Darf Beziehungen zwischen Partnern lesen Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen  |
+| ` partner:beziehungen:schreiben ` |   Darf Beziehungen zwischen Partnern schreiben Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben  |
+| ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
+| ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben  |
+| ` reporting:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
+| ` reporting:produktanbieterreport:lesen ` |   Darf den Produktanbieter-Report runterladen  |
 | ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
 | ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
 | ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
