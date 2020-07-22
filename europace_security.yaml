@@ -75,27 +75,27 @@ flows:
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
 
-      unterlagen:dokument:upload: |
+      unterlagen:dokument:hochladen: |
         ## Dokumente hochladen
         Der Client kann Dokumente zu einem Vorgang hochladen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
-      unterlagen:dokument:read: |
+      unterlagen:dokument:lesen: |
         ## Dokumente lesen
         Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.
-      unterlagen:dokument:write: |
+      unterlagen:dokument:schreiben: |
         ## Dokumente umbenennen und löschen
-      unterlagen:unterlage:read: |
+      unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
         Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.
-      unterlagen:unterlage:write: |
+      unterlagen:unterlage:schreiben: |
         ## Unterlagen neu zuordnen
         Der Client kann die Kategorie und den Bezug der Unterlagen ändern.
       unterlagen:unterlage:freigeben: |
         ## Unterlagen freigeben
         Der Client kann Unterlagen für einen Antrag freigeben.
-      unterlagen:freigabe:read: |
+      unterlagen:freigabe:lesen: |
         ## Freigegebene Unterlagen lesen
         Der Client kann freigegebene Unterlagen zu einem Antrag abrufen
-      unterlagen:freigabe:write: |
+      unterlagen:freigabe:schreiben: |
         ## Freigegebene Unterlagen aktualisieren
         Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
 
