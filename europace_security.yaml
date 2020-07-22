@@ -97,7 +97,7 @@ flows:
         Der Client kann freigegebene Unterlagen zu einem Antrag abrufen
       unterlagen:freigabe:write: |
         ## Freigegebene Unterlagen aktualisieren
-        Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Bankensicht den Empfang der Unterlagen zu bestätigen.
+        Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
 
       impersonieren: |
         ## Darf Impersonieren
