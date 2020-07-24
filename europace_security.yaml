@@ -79,7 +79,7 @@ flows:
         ## Dokumente lesen
         Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.
       unterlagen:dokument:schreiben: |
-        ## Dokumente umbenennen und löschen
+        ## Dokumente schreiben und kategorisieren
         Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
