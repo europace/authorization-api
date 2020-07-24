@@ -75,14 +75,12 @@ flows:
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
 
-      unterlagen:dokument:hochladen: |
-        ## Dokumente hochladen
-        Der Client kann Dokumente zu einem Vorgang hochladen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:dokument:lesen: |
         ## Dokumente lesen
         Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.
       unterlagen:dokument:schreiben: |
         ## Dokumente umbenennen und löschen
+        Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
         Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.
