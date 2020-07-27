@@ -36,6 +36,13 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben  |
 | ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen  |
 | ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben  |
+| ` unterlagen:dokument:lesen ` |   Dokumente lesen Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.  |
+| ` unterlagen:dokument:schreiben ` |   Dokumente schreiben und kategorisieren Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
+| ` unterlagen:unterlage:lesen ` |   Unterlagen lesen Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.  |
+| ` unterlagen:unterlage:schreiben ` |   Unterlagen neu zuordnen Der Client kann die Kategorie und den Bezug der Unterlagen ändern.  |
+| ` unterlagen:unterlage:freigeben ` |   Unterlagen freigeben Der Client kann Unterlagen für einen Antrag freigeben.  |
+| ` unterlagen:freigabe:lesen ` |   Freigegebene Unterlagen lesen Der Client kann freigegebene Unterlagen zu einem Antrag abrufen  |
+| ` unterlagen:freigabe:schreiben ` |   Freigegebene Unterlagen aktualisieren Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.  |
 | ` impersonieren ` |   Darf Impersonieren Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.  |
 | ` openid ` |   Benutzer-Login durchführen Der Client kann das Login des Benutzers auf der Plattform mittels OpenID Connect anfordern und die Identität des Benutzers abrufen.  |
 | ` profile ` |   Benutzerprofil lesen Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.  |
