@@ -23,7 +23,7 @@ Die Authentifizierung durch Username/Password an den APIs wird bis Ende Oktober 
 Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
 
 Dabei müssen folgende Schritte durchlaufen werden:
-- Einmalig musst du deinen Client in Europace registrieren lassen woraufhin du die Client_ID und das Secret für den Client erhältst
+- Einmalig musst du deinen Client in Europace registrieren lassen, woraufhin du die `Client_ID` und das `Client-Secret` für den Client erhältst
 - Für die Anmeldung an Europace rufst du https://api.europace.de/auth/token mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen `Access_Token` zu erhalten.
 - Mit dem `Access_Token` als Bearer-Token kannst du Requests an den Europace APIs durchführen.
 Request-Header-Variable:  `Authorization: Bearer [Access_Token]
