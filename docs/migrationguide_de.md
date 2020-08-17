@@ -10,7 +10,7 @@ Deshalb räumen wir mit den bislang proprietären Authentifizierungsverfahren au
 
 Wir erhöhen damit die Sicherheit, indem API-Keys noch einfacher erneuert werden können und der Zugriff auf die Europace-Technologie noch nachvollziehbarer wird.
 
-Außerdem ermöglichen wir mit OAuth zukünfitg echtes Single Sign On über die Einbindung eigenen Benutzerdatenbanken für das Anmeldeverfahren. Außerdem können Toolhersteller ihre Anwendungen nach Rücksprache mit den Europace-Partnern noch einfacher für alle im Self-Service einbinden, ohne Benutzername und Passwort zu kennen.
+Außerdem ermöglichen wir mit OAuth2 zukünftig echtes Single Sign On über die Einbindung eigener Benutzerdatenbanken für das Anmeldeverfahren. Zudem können Toolhersteller ihre Anwendungen nach Rücksprache mit den Europace-Partnern noch einfacher für alle im Self-Service einbinden, ohne Benutzername und Passwort zu kennen.
 
 Wir sind davon überzeugt, die Einführung von OAuth bei Europace ist ein entscheidender Basis-Baustein für unsere Partner und uns, um die  Digitalisierung der Baufinanzierung voranzutreiben.
 
