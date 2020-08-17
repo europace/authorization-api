@@ -83,7 +83,7 @@ curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 Bislang standen dir verschiedene Authentifizierungsverfahren zur Verfügung. In diesem Abschnitt zeigen wir dir, wie du am Besten in den unterschiedlichen Anwendungsfällen auf OAuth wechselst und so von der Vereinfachung und Standardisierung des OAuth-Authentifizierungsverfahrens profitierst.
 
 ### API-Key
-Damit du keine Passworte von Benutzern speichern und verwenden musst, werden für den Zugriff auf Schnittstellen API-Keys verwendet. Mit großer Wahrscheinlichkeit hast auch du diese Methode für deine Anbindung verwendet.
+Damit du keine Passwörter von Benutzern speichern und verwenden musst, werden für den Zugriff auf Schnittstellen API-Keys verwendet. Mit großer Wahrscheinlichkeit hast auch du diese Methode für deine Anbindung verwendet.
 
 häufig genutzt bei diesen APIs:
 - Vorgaenge-API
