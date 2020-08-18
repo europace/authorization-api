@@ -45,6 +45,8 @@ Bitte wende dich an <a href="mailto:helpdesk@europace2.de?subject=Registrierung 
 
 Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir dir deinen Client umgehend und stellen dir die Client-ID und das Client-Secret in deiner persönlichen Linkliste in Europace zur Verfügung.
 
+![Linksammlung.png](https://github.com/europace/authorization-api/tree/master/docs/img/Linksammlung.png "Linksammlung")
+
 Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://developer.europace.de/terms/) einverstanden erklärst.
 
 #### Wie bekomme ich einen Access-Token?
