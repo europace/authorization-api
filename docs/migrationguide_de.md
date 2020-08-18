@@ -1,7 +1,7 @@
-# OAuth Migrations-Guide
+# OAuth2 Migrations-Guide
 
 Alles was du brauchst, um auf
-OAuth zu wechseln.
+OAuth2 zu wechseln.
 
 ## Einleitung
 Sicherheit ist einer der wichtigsten nicht-funktionalen Anforderungen an eine Plattform wie Europace, die Finanzdaten von Verbrauchern verwendet. Wir nehmen diese Verantwortung sehr ernst. Und gleichzeitig glauben wir daran, dass eine technische Anbindung an die Europace-Technologie leichtgewichtig und schnell passieren kann.
@@ -10,20 +10,20 @@ Deshalb räumen wir mit den bislang proprietären Authentifizierungsverfahren au
 
 Wir erhöhen damit die Sicherheit, indem API-Keys noch einfacher erneuert werden können und der Zugriff auf die Europace-Technologie noch nachvollziehbarer wird.
 
-Außerdem ermöglichen wir mit OAuth zukünfitg echtes Single Sign On über die Einbindung eigenen Benutzerdatenbanken für das Anmeldeverfahren. Außerdem können Toolhersteller ihre Anwendungen nach Rücksprache mit den Europace-Partnern noch einfacher für alle im Self-Service einbinden, ohne Benutzername und Passwort zu kennen.
+Außerdem ermöglichen wir mit OAuth2 zukünftig echtes Single Sign On über die Einbindung eigener Benutzerdatenbanken für das Anmeldeverfahren. Zudem können Toolhersteller ihre Anwendungen nach Rücksprache mit den Europace-Partnern noch einfacher für alle im Self-Service einbinden, ohne Benutzername und Passwort zu kennen.
 
-Wir sind davon überzeugt, die Einführung von OAuth bei Europace ist ein entscheidender Basis-Baustein für unsere Partner und uns, um die  Digitalisierung der Baufinanzierung voranzutreiben.
+Wir sind davon überzeugt, die Einführung von OAuth2 bei Europace ist ein entscheidender Basis-Baustein für unsere Partner und uns, um die  Digitalisierung der Baufinanzierung voranzutreiben.
 
 ## Bis wann muss die Migration erfolgen?
 Alle aktuellen APIs (Stand Juli 2020) werden noch bis Ende Juli 2021 die alten Authentifizierungsverfahren auf Basis von API-Key unterstützen.
 
-Die Authentifizierung durch Username/Password an den APIs wird bis Ende Oktober 2020 abgeschaltet. Wenn du dieses Verfahren einsetzt, musst du schnellstmöglich auf OAuth wechseln, um die Funktionsfähigkeit deiner Integration sicherzustellen!
+Die Authentifizierung durch Username/Password an den APIs wird bis Ende Oktober 2020 abgeschaltet. Wenn du dieses Verfahren einsetzt, musst du schnellstmöglich auf OAuth2 wechseln, um die Funktionsfähigkeit deiner Integration sicherzustellen!
 
-## Wie benutze ich OAuth?
+## Wie benutze ich OAuth2?
 Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
 
 Dabei müssen folgende Schritte durchlaufen werden:
-- Einmalig musst du deinen Client in Europace registrieren lassen woraufhin du die Client_ID und das Secret für den Client erhältst
+- Einmalig musst du deinen Client in Europace registrieren lassen, woraufhin du die `Client_ID` und das `Client-Secret` für den Client erhältst
 - Für die Anmeldung an Europace rufst du https://api.europace.de/auth/token mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen `Access_Token` zu erhalten.
 - Mit dem `Access_Token` als Bearer-Token kannst du Requests an den Europace APIs durchführen.
 Request-Header-Variable:  `Authorization: Bearer [Access_Token]
@@ -82,10 +82,10 @@ curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 ```
 
 ## Alte Welt - neue Welt
-Bislang standen dir verschiedene Authentifizierungsverfahren zur Verfügung. In diesem Abschnitt zeigen wir dir, wie du am Besten in den unterschiedlichen Anwendungsfällen auf OAuth wechselst und so von der Vereinfachung und Standardisierung des OAuth-Authentifizierungsverfahrens profitierst.
+Bislang standen dir verschiedene Authentifizierungsverfahren zur Verfügung. In diesem Abschnitt zeigen wir dir, wie du am Besten in den unterschiedlichen Anwendungsfällen auf OAuth2 wechselst und so von der Vereinfachung und Standardisierung des OAuth2-Authentifizierungsverfahrens profitierst.
 
 ### API-Key
-Damit du keine Passworte von Benutzern speichern und verwenden musst, werden für den Zugriff auf Schnittstellen API-Keys verwendet. Mit großer Wahrscheinlichkeit hast auch du diese Methode für deine Anbindung verwendet.
+Damit du keine Passwörter von Benutzern speichern und verwenden musst, werden für den Zugriff auf Schnittstellen API-Keys verwendet. Mit großer Wahrscheinlichkeit hast auch du diese Methode für deine Anbindung verwendet.
 
 häufig genutzt bei diesen APIs:
 - Vorgaenge-API
@@ -183,7 +183,7 @@ curl --location --request POST 'https://api.europace.de/login' \
 
 Beispiel neu: \
 siehe “Beispiel neu” in “API-Key (Impersionieren)” \
-oder OAuth-Flow mit Client-Approval
+oder OAuth2-Flow mit Client-Approval (not available yet)
 
 >⚠️ **Hinweis** \
 Da hier Benutzername und Password oft in Tools unerlaubterweise zwischengespeichert werden, **wird diese Methode ab Ende Oktober 2020 nicht mehr zur Verfügung stehen**. Das JWT aus dieser Methode kann zukünftig nicht mehr für API-Aufrufe verwendet werden. Es ist dringend auf OAuth zu wechseln.
