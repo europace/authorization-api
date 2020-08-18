@@ -19,7 +19,7 @@ Alle aktuellen APIs (Stand Juli 2020) werden noch bis Ende Juli 2021 die alten A
 
 Die Authentifizierung durch Username/Password an den APIs wird bis Ende Oktober 2020 abgeschaltet. Wenn du dieses Verfahren einsetzt, musst du schnellstmöglich auf OAuth2 wechseln, um die Funktionsfähigkeit deiner Integration sicherzustellen!
 
-## Wie benutze ich OAuth2?
+# Wie benutze ich OAuth2?
 Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
 
 Dabei müssen folgende Schritte durchlaufen werden:
@@ -30,7 +30,7 @@ Request-Header-Variable:  `Authorization: Bearer [Access_Token]
 
 Die meisten HTTP Clients unterstützen OAuth2 bereits, lediglich Client_ID, Client_Secret sowie die Adresse des Authorization Servers musst du in der Config hinterlegen.
 
-#### Wie bekomme ich einen Client registriert?
+## Wie bekomme ich einen Client registriert?
 
 <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hallo,%0D%0Abitte%20registriert%20einen%20API-Client%20für%20mich.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Beschreibung:%0D%0Atechnische%20Kontakt-Email-Adresse:%0D%0Akurze%20Beschreibung%20des%20Anwendungsfalls:%0D%0Abenötigte%20Scopes:%0D%0A%0D%0AVielen%20Dank">zur Client-Registrierung</a>
 
@@ -49,7 +49,7 @@ Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir 
 
 Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://developer.europace.de/terms/) einverstanden erklärst.
 
-#### Wie bekomme ich einen Access-Token?
+## Wie bekomme ich einen Access-Token?
 Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen Access_Token zu erhalten.
 
 Request:
@@ -70,7 +70,7 @@ Response:
 
 In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client registriert ist. Weitere Anwendungsfälle werden in “Alte Welt - neue Welt” behandelt.
 
-#### Wie rufe ich eine API mit Access-Token auf?
+## Wie rufe ich eine API mit Access-Token auf?
 Mit dem Access_Token als Bearer-Token kannst du Requests an den Europace APIs durchführen.
 Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
 
@@ -81,10 +81,10 @@ curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 --header 'Authorization: Bearer [Access_Token]
 ```
 
-## Alte Welt - neue Welt
+# Alte Welt - neue Welt
 Bislang standen dir verschiedene Authentifizierungsverfahren zur Verfügung. In diesem Abschnitt zeigen wir dir, wie du am Besten in den unterschiedlichen Anwendungsfällen auf OAuth2 wechselst und so von der Vereinfachung und Standardisierung des OAuth2-Authentifizierungsverfahrens profitierst.
 
-### API-Key
+## API-Key
 Damit du keine Passwörter von Benutzern speichern und verwenden musst, werden für den Zugriff auf Schnittstellen API-Keys verwendet. Mit großer Wahrscheinlichkeit hast auch du diese Methode für deine Anbindung verwendet.
 
 häufig genutzt bei diesen APIs:
@@ -105,7 +105,7 @@ curl --location --request POST 'https://api.europace.de/login' \
 Beispiel neu: \
 siehe “Wie bekomme ich einen Access-Token?”
 
-### API-Key (Impersionieren)
+## API-Key (Impersionieren)
 Das impersionierte API-Key-Verfahren wird dann verwendet, wenn die API den konkreten Benutzer benötigt und man nicht für jeden einen API-Key anfordern möchte. Es reicht einen API-Key einer Organisation zu besitzen, der als Generalsschlüssel fungiert und mit dem Benutzer, auf die die Organisation Zugriff hat, angemeldet werden können.
 
 häufig genutzt bei diesen APIs:
@@ -145,7 +145,7 @@ Scope |	muss impersonieren enthalten (Hinweis: Wenn ein Scope angegeben wird, m�
 >⚠️ *Hinweis* \
 Für den Anwendungsfalls des Silent Sign On werden wir demnächst das Single Sign On über OpenID-Connect anbieten, mit dem du deine eigene Benutzerdatenbank als Identity Service Provider an Europace anbinden kannst. Das Silent Sign On Verfahren werden wir nicht länger unterstützen.
 
-### Username/Password (Cookie)
+## Username/Password (Cookie)
 Diese Methode wird meistens verwendet, wenn du die angebotene Login-Maske von Europace oder eine eigene Loginmaske auf deiner Website/Intranet eingebunden hast.
 
 Beispiel bisher:
@@ -161,7 +161,7 @@ Hier musst du erst einmal nichts tun.
 >⚠️ **Hinweis** \
 Das JWT, dass im Cookie gespeichert wird, kann zukünftig nicht mehr für API-Aufrufe verwendet werden. Wenn du diesen Anwendungsfall hast, dann wechsle **bis Ende Oktober 2020 auf OAuth.**
 
-### Username/Password (Token)
+## Username/Password (Token)
 Diese Methode wird häufig von Toolanbietern verwendet, weil die Anbindung neuer Benutzer im Self-Service erfolgen kann. Der Benutzer benötigt nur Username und Password und keine technischen Informationen, die ggf. erst besorgt werden müssen.
 
 häufig genutzt bei diesen APIs:
@@ -188,7 +188,7 @@ oder OAuth2-Flow mit Client-Approval (not available yet)
 >⚠️ **Hinweis** \
 Da hier Benutzername und Password oft in Tools unerlaubterweise zwischengespeichert werden, **wird diese Methode ab Ende Oktober 2020 nicht mehr zur Verfügung stehen**. Das JWT aus dieser Methode kann zukünftig nicht mehr für API-Aufrufe verwendet werden. Es ist dringend auf OAuth zu wechseln.
 
-### Silent Sign On
+## Silent Sign On
 Um die Einbindung von Europace in Intranet oder CRM-System nahtlos zu ermöglichen, bietet Europace die Möglichkeit des Silent Sign On, d.h. ein System kann ihm bekannte Europace-Benutzer mittels API-Key (Generalschlüssel) anmelden und die Oberfläche von Europace anzeigen. Damit entfällt der Schritt der Anmeldung für den Benutzer.
 
 Dieses Verfahren wird noch bis Ende Juli 2021 unterstützt.
