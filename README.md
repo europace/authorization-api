@@ -7,12 +7,17 @@ Mit dieser API lässt sich ein OAuth Access Token anfordern, mit dem andere Euro
 Diese API ist neu und es sind noch nicht alle Europace Services auf das neue Access Token umgestellt. An folgenden APIs kann das neue Access Token schon verwendet werden:
 * [BaufiSmart Anträge API](https://github.com/europace/baufismart-antraege-api)
 * [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
+* [BaufiSmart Ereignis API](https://github.com/europace/baufismart-ereignisse-api)
+* [BaufiSmart Angebote API](https://github.com/europace/baufismart-angebote-api)
 * [KreditSmart KEX Vorgang Import API](https://github.com/europace/kex-vorgang-import-api)
 * [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
 * [KreditSmart KEX Vorgang Update API](https://github.com/europace/kex-vorgang-update-api)
 * [KreditSmart KEX Angebote API](https://github.com/europace/kex-angebote-api)
 * [KreditSmart KEX Antragsstatus API](https://github.com/europace/kex-antragsstatus-api)
+* [Unterlagen API](https://github.com/europace/unterlagen-api)
 
+## Migrationsguide
+Als Unterstützung für den Wechsel auf OAuth2 von den bisherigen Authentifizierungsverfahren gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/Migrationsguide/docs/migrationguide_de.md).
 
 ## Grundlegendes
 Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die Registrierung muss von einem Admin im Partnermanagement durchgeführt werden. Eine Anleitung dafür [befindet sich hier](https://europace2.zendesk.com/hc/de/articles/360012514780).
@@ -20,7 +25,7 @@ Um die Europace Plattform zu nutzen brauchst du einen registrierten Client. Die 
 Clients agieren im Namen von Nutzern (oder Organisationen), die im Partnermanagement hinterlegt sind. Ein registrierter Client wird durch eine `Client ID` und einem `Client Secret` identifiziert: beide werden bei der Registrierung generiert.
 
 ## Vergleich zur Vergangenheit
-In der Vergangenheit benötigte man eine `Partner ID` und einen `API Key`, um die Europace APIs zu nutzen. Jeder Europace Nutzer hatte automatisch einen API Zugang und konnte die APIs nutzen, vorausgesetzt `Parnter ID`und `API Key` waren ihm bekannt. Damals erfolgte der API Zugriff immer *im Namen des Nutzers*. Dieses ist nun nicht mehr so: der API Zugriff erfolgt nun im Namen eines Clients. 
+In der Vergangenheit benötigte man eine `Partner ID` und einen `API Key`, um die Europace APIs zu nutzen. Jeder Europace Nutzer hatte automatisch einen API Zugang und konnte die APIs nutzen, vorausgesetzt `Parnter ID`und `API Key` waren ihm bekannt. Damals erfolgte der API Zugriff immer *im Namen des Nutzers*. Dieses ist nun nicht mehr so: der API Zugriff erfolgt nun im Namen eines Clients.
 
 Es können beliebig viele Clients an einer Plakette registriert werden.
 
@@ -63,7 +68,7 @@ curl "https://api.europace.de/auth/access-token" \
 ```
 
 In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client
-[registriert](Client-Registrierung.md#client-registrierung) ist. 
+[registriert](Client-Registrierung.md#client-registrierung) ist.
 
 Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
 
