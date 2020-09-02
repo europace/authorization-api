@@ -1,24 +1,30 @@
 # Authorization API
 
-![Check YAML with Linter](https://github.com/europace/authorization-api/workflows/Check%20yaml%20with%20Linter/badge.svg?branch=master) ![Create Scopes Doc](https://github.com/europace/authorization-api/workflows/Create%20Scopes%20Doc/badge.svg)
-
 Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Verfügung. Sie ist eine zwingende Voraussetzung zur Verwendung von Europace APIs.
+
+![Vertrieb](https://img.shields.io/badge/-Vertrieb-lightblue)
+![Produktanbieter](https://img.shields.io/badge/-Produktanbieter-lightblue)
+![Baufinanzierung](https://img.shields.io/badge/-Baufinanzierung-lightblue)
+![Privatkredit](https://img.shields.io/badge/-Privatkredit-lightblue)
+
+[![Authentication](https://img.shields.io/badge/Auth-OAuth2-green)](https://github.com/europace/authorization-api)
+[![YAML](https://img.shields.io/badge/{}-YAML-green)](https://github.com/europace/authorization-api/blob/master/authorization.yaml)
+[![Github](https://img.shields.io/badge/-Github-black?logo=github)](https://github.com/europace/authorization-api)
+
+[![GitHub release](https://img.shields.io/github/v/release/europace/authorization-api)](https://github.com/europace/authorization-api/releases)
+[![Pattern](https://img.shields.io/badge/Pattern-Tolerant%20Reader-yellowgreen)](https://martinfowler.com/bliki/TolerantReader.html)
+
+![Check YAML with Linter](https://github.com/europace/authorization-api/workflows/Check%20yaml%20with%20Linter/badge.svg?branch=master) ![Create Scopes Doc](https://github.com/europace/authorization-api/workflows/Create%20Scopes%20Doc/badge.svg)
 
 > ## Migrationsguide
 Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/Migrationsguide/docs/migrationguide_de.md).
-\
-\
-Diese Authorization-API ist neu und es sind noch nicht alle Europace Services auf das neue Access Token umgestellt. An folgenden APIs kann das neue Access Token schon verwendet werden:
-* [BaufiSmart Anträge API](https://github.com/europace/baufismart-antraege-api)
-* [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
-* [BaufiSmart Ereignis API](https://github.com/europace/baufismart-ereignisse-api)
-* [BaufiSmart Angebote API](https://github.com/europace/baufismart-angebote-api)
-* [KreditSmart KEX Vorgang Import API](https://github.com/europace/kex-vorgang-import-api)
-* [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
-* [KreditSmart KEX Vorgang Update API](https://github.com/europace/kex-vorgang-update-api)
-* [KreditSmart KEX Angebote API](https://github.com/europace/kex-angebote-api)
-* [KreditSmart KEX Antragsstatus API](https://github.com/europace/kex-antragsstatus-api)
-* [Unterlagen API](https://github.com/europace/unterlagen-api)
+
+## Anwendungsfälle
+- Benutzer anmelden, um Europace-APIs zu verwenden
+
+# Schnellstart
+Damit du unsere APIs und deinen Anwendungsfall schnellstmöglich testen kannst, haben wir eine [Postman-Collection](https://github.com/europace/api-schnellstart) für dich zusammengestellt.
+
 
 
 # Wie benutze ich OAuth2?
@@ -117,6 +123,12 @@ Subject |	die Partnerid des anzumeldenden Benutzers |
 Actor 	|	die Partnerid des registrierten Clients |
 Hinweis | die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. |
 Scope |	muss impersonieren enthalten (Hinweis: Wenn ein Scope angegeben wird, müssen alle erforderlichen Rechte angegeben werden, d.h. impersonieren allein macht keinen Sinn.) |
+
+## Nutzungsbedingungen
+Die APIs werden unter folgenden [Nutzungsbedingungen](https://developer.europace.de/terms/) zur Verfügung gestellt.
+
+## Support
+Bei Fragen oder Problemen kannst du dich an devsupport@europace2.de wenden.
 
 [JWT]: https://tools.ietf.org/html/rfc7519
 [ASCII]: http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-006.pdf
