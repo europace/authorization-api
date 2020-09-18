@@ -77,25 +77,25 @@ flows:
 
       unterlagen:dokument:lesen: |
         ## Dokumente lesen
-        Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.
+        als Vertrieb, Abruf der Metadaten und des Inhalts hochgeladener Dokumente.
       unterlagen:dokument:schreiben: |
         ## Dokumente schreiben und kategorisieren
-        Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
+        als Vertrieb, Hochladen von Dokumenten und Anstoßen der Kategorisierung. Die Kategorisierung muß angestoßen werden, damit nachfolgend die erkannten Unterlagen (kategorisierter Inhalt) freigegeben werden können. Weiterhin das Aktualisieren der Metadaten und Löschen hochgeladener Dokumente.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
-        Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.
+        als Vertrieb, Abruf der Unterlagen(Kategorisierungsinformationen) und der Zuordnungsinformationen zum Vorgang
       unterlagen:unterlage:schreiben: |
         ## Unterlagen neu zuordnen
-        Der Client kann die Kategorie und den Bezug der Unterlagen ändern.
+        als Vertrieb, Ändern der Unterlagenkategorie und Zuordnung im Vorgang (Antragsteller, Immobilie, Vorhaben)
       unterlagen:unterlage:freigeben: |
         ## Unterlagen freigeben
-        Der Client kann Unterlagen für einen Antrag freigeben.
+        als Vertrieb, Freigabe der Unterlagen für einen Antrag
       unterlagen:freigabe:lesen: |
         ## Freigegebene Unterlagen lesen
-        Der Client kann freigegebene Unterlagen zu einem Antrag abrufen
+        als Vertrieb und Kreditbetrieb, Abruf der Metadaten und des Inhalts freigegebener Unterlagen zu einem Antrag
       unterlagen:freigabe:schreiben: |
         ## Freigegebene Unterlagen aktualisieren
-        Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
+        als Kreditbetrieb, nach Verarbeitung der Pushbenachrichtigung einer neuen Freigabe, den Verarbeitungsstatus (Freigabestatus) setzen
 
       impersonieren: |
         ## Darf Impersonieren
