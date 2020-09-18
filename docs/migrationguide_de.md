@@ -47,7 +47,7 @@ Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir 
 
 ![Linksammlung.png](https://raw.githubusercontent.com/europace/authorization-api/Migrationsguide/docs/img/Linksammlung.png "Linksammlung")
 
-Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://developer.europace.de/terms/) einverstanden erklärst.
+Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) einverstanden erklärst.
 
 ## Wie bekomme ich einen Access-Token?
 Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen Access_Token zu erhalten.
