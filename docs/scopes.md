@@ -17,7 +17,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
 | ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben  |
 | ` report:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
-| ` report:produktanbieterreport:lesen ` |   Darf den Produktanbieter-Report runterladen  |
+| ` report:produktanbieter:lesen ` |   Darf den Produktanbieter-Report runterladen  |
 | ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
 | ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
 | ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |

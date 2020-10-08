@@ -34,7 +34,7 @@ flows:
 
       report:rohdaten:lesen: |
         ## Darf den Rohdaten-Report runterladen
-      report:produktanbieterreport:lesen: |
+      report:produktanbieter:lesen: |
         ## Darf den Produktanbieter-Report runterladen
 
       baufinanzierung:echtgeschaeft: |
