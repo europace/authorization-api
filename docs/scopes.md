@@ -16,8 +16,8 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:beziehungen:schreiben ` |   Darf Beziehungen zwischen Partnern schreiben Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben  |
 | ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
 | ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben  |
-| ` reporting:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
-| ` reporting:produktanbieterreport:lesen ` |   Darf den Produktanbieter-Report runterladen  |
+| ` report:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
+| ` report:produktanbieter:lesen ` |   Darf den Produktanbieter-Report runterladen  |
 | ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
 | ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
 | ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
