@@ -32,9 +32,9 @@ flows:
       partner:rechte:schreiben: |
         ## Darf Rechte eines Partners schreiben
 
-      reporting:rohdaten:lesen: |
+      report:rohdaten:lesen: |
         ## Darf den Rohdaten-Report runterladen
-      reporting:produktanbieterreport:lesen: |
+      report:produktanbieter:lesen: |
         ## Darf den Produktanbieter-Report runterladen
 
       baufinanzierung:echtgeschaeft: |
