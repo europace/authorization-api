@@ -33,7 +33,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufinanzierung:produktanbieter:lesen ` |   Produktanbieter lesen  |
 | ` baufinanzierung:produktanbieter:schreiben ` |   Produktanbieter schreiben  |
 | ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln  |
-| ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben  |
+| ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen. |
 | ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen  |
 | ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben  |
 | ` unterlagen:dokument:lesen ` |   Dokumente lesen Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.  |
