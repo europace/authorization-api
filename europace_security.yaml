@@ -72,6 +72,7 @@ flows:
         ## Kreditsmartanträge schreiben
       privatkredit:vorgang:lesen: |
         ## Kreditsmartvorgänge lesen
+        Der Client ermöglicht das automatisierte Auslesen von Vorgängen in KreditSmart.
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
 
