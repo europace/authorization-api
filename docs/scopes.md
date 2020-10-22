@@ -35,7 +35,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln  |
 | ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen.  |
 | ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen Der Client kann KreditSmart-Vorgänge automatisiert auslesen.  |
-| ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben  |
+| ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben Der Client kann KreditSmart-Vorgänge automatisiert anlegen.  |
 | ` unterlagen:dokument:lesen ` |   Dokumente lesen Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.  |
 | ` unterlagen:dokument:schreiben ` |   Dokumente schreiben und kategorisieren Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
 | ` unterlagen:unterlage:lesen ` |   Unterlagen lesen Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.  |
