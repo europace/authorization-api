@@ -76,6 +76,7 @@ flows:
         Der Client kann KreditSmart-Vorgänge automatisiert auslesen.
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
+        Der Client kann KreditSmart-Vorgänge automatisiert anlegen.
 
       unterlagen:dokument:lesen: |
         ## Dokumente lesen
@@ -108,7 +109,7 @@ flows:
       profile: |
         ## Benutzerprofil lesen
         Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.
-     
+
     requiredAuthorities:
       baufinanzierung:echtgeschaeft:
         - BS_SICHTBAR
