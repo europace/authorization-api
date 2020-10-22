@@ -73,6 +73,7 @@ flows:
         Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen.
       privatkredit:vorgang:lesen: |
         ## Kreditsmartvorgänge lesen
+        Der Client kann KreditSmart-Vorgänge automatisiert auslesen.
       privatkredit:vorgang:schreiben: |
         ## Kreditsmartvorgänge schreiben
 
