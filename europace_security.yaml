@@ -68,7 +68,7 @@ flows:
 
       privatkredit:angebot:ermitteln: |
         ## Kreditsmartangebote ermitteln
-        Der Client ermöglicht die Ermittlung von Ratenkredit-Angeboten mit Schaufensterkonditionen.
+        Der Client kann Ratenkredit-Angebote und Schaufensterkonditionen ermitteln.
       privatkredit:antrag:schreiben: |
         ## Kreditsmartanträge schreiben
       privatkredit:vorgang:lesen: |
