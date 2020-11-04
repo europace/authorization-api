@@ -5,7 +5,7 @@
 Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Verfügung. Sie ist eine zwingende Voraussetzung zur Verwendung von Europace APIs.
 
 > ## Migrationsguide
-Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/Migrationsguide/docs/migrationguide_de.md).
+Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/master/docs/migrationguide_de.md).
 \
 \
 Diese Authorization-API ist neu und es sind noch nicht alle Europace Services auf das neue Access Token umgestellt. An folgenden APIs kann das neue Access Token schon verwendet werden:
