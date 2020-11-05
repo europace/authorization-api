@@ -16,8 +16,8 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:beziehungen:schreiben ` |   Darf Beziehungen zwischen Partnern schreiben Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben  |
 | ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
 | ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben  |
-| ` reporting:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
-| ` reporting:produktanbieterreport:lesen ` |   Darf den Produktanbieter-Report runterladen  |
+| ` report:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
+| ` report:produktanbieter:lesen ` |   Darf den Produktanbieter-Report runterladen  |
 | ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
 | ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
 | ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
@@ -32,10 +32,10 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufinanzierung:produkt:schreiben ` |   Produkt schreiben  |
 | ` baufinanzierung:produktanbieter:lesen ` |   Produktanbieter lesen  |
 | ` baufinanzierung:produktanbieter:schreiben ` |   Produktanbieter schreiben  |
-| ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln  |
-| ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben  |
-| ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen  |
-| ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben  |
+| ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln Der Client kann Ratenkredit-Angebote und Schaufensterkonditionen ermitteln.  |
+| ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen.  |
+| ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen Der Client kann KreditSmart-Vorgänge automatisiert auslesen.  |
+| ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben Der Client kann KreditSmart-Vorgänge automatisiert anlegen.  |
 | ` unterlagen:dokument:lesen ` |   Dokumente lesen Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.  |
 | ` unterlagen:dokument:schreiben ` |   Dokumente schreiben und kategorisieren Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
 | ` unterlagen:unterlage:lesen ` |   Unterlagen lesen Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.  |

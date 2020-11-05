@@ -1,27 +1,33 @@
 # Authorization API
 
-![Check YAML with Linter](https://github.com/europace/authorization-api/workflows/Check%20yaml%20with%20Linter/badge.svg?branch=master) ![Create Scopes Doc](https://github.com/europace/authorization-api/workflows/Create%20Scopes%20Doc/badge.svg)
-
 Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Verfügung. Sie ist eine zwingende Voraussetzung zur Verwendung von Europace APIs.
 
-> ## Migrationsguide
-Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/master/docs/migrationguide_de.md).
-\
-\
-Diese Authorization-API ist neu und es sind noch nicht alle Europace Services auf das neue Access Token umgestellt. An folgenden APIs kann das neue Access Token schon verwendet werden:
-* [BaufiSmart Anträge API](https://github.com/europace/baufismart-antraege-api)
-* [BaufiSmart Vorgänge API](https://github.com/europace/baufismart-vorgaenge-api)
-* [BaufiSmart Ereignis API](https://github.com/europace/baufismart-ereignisse-api)
-* [BaufiSmart Angebote API](https://github.com/europace/baufismart-angebote-api)
-* [KreditSmart KEX Vorgang Import API](https://github.com/europace/kex-vorgang-import-api)
-* [KreditSmart KEX Vorgang Export API](https://github.com/europace/kex-vorgang-export-api)
-* [KreditSmart KEX Vorgang Update API](https://github.com/europace/kex-vorgang-update-api)
-* [KreditSmart KEX Angebote API](https://github.com/europace/kex-angebote-api)
-* [KreditSmart KEX Antragsstatus API](https://github.com/europace/kex-antragsstatus-api)
-* [Unterlagen API](https://github.com/europace/unterlagen-api)
 
+![Vertrieb](https://img.shields.io/badge/-Vertrieb-lightblue)
+![Produktanbieter](https://img.shields.io/badge/-Produktanbieter-lightblue)
+![Baufinanzierung](https://img.shields.io/badge/-Baufinanzierung-lightblue)
+![Privatkredit](https://img.shields.io/badge/-Privatkredit-lightblue)
 
-# Wie benutze ich OAuth2?
+[![Authentication](https://img.shields.io/badge/Auth-OAuth2-green)](https://github.com/europace/authorization-api)
+
+[![GitHub release](https://img.shields.io/github/v/release/europace/authorization-api)](https://github.com/europace/authorization-api/releases)
+[![Pattern](https://img.shields.io/badge/Pattern-Tolerant%20Reader-yellowgreen)](https://martinfowler.com/bliki/TolerantReader.html)
+
+## Dokumentation
+[![YAML](https://img.shields.io/badge/OAS-HTML_Doc-lightblue)](https://europace.github.io/authorization-api/oas-doc.html)
+[![YAML](https://img.shields.io/badge/OAS-YAML-lightgrey)](https://github.com/europace/authorization-api/blob/master/authorization.yaml)
+
+**Migrationsguide** \
+Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://github.com/europace/authorization-api/blob/Migrationsguide/docs/migrationguide_de.md).
+
+## Anwendungsfälle
+- Benutzer anmelden, um Europace-APIs zu verwenden
+
+## Schnellstart
+Damit du unsere APIs und deinen Anwendungsfall schnellstmöglich testen kannst, haben wir eine [Postman-Collection](https://github.com/europace/api-schnellstart) für dich zusammengestellt.
+
+## Wie benutze ich OAuth2?
+
 Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
 
 Dabei müssen folgende Schritte durchlaufen werden:
@@ -45,9 +51,9 @@ Bitte wende dich an <a href="mailto:helpdesk@europace2.de?subject=Registrierung 
 
 Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir dir deinen Client umgehend und stellen dir die Client-ID und das Client-Secret in deiner persönlichen Linkliste in Europace zur Verfügung.
 
-![Linksammlung.png](https://raw.githubusercontent.com/europace/authorization-api/Migrationsguide/docs/img/Linksammlung.png "Linksammlung")
+![Linksammlung.png](https://raw.githubusercontent.com/europace/authorization-api/master/docs/img/Linksammlung.png "Linksammlung")
 
-Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://developer.europace.de/terms/) einverstanden erklärst.
+Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) einverstanden erklärst.
 
 ## Wie bekomme ich einen Access-Token?
 Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen Access_Token zu erhalten.
@@ -90,7 +96,7 @@ Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
   [OAuth2.0 Grant-Type][RFC6749#4], muss für den Client-Credentials-Flow `client_credentials` sein.
 - ##### Scopes (`scope`)
   "` `"-separierte Liste von Scopes. Wird ein Subject angegeben muss `impersonieren` als Scope enthalten sein.
-  Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt. Es ist möglich einen eingeschränkten Zugriff anzufragen, in dem man spezifische Scopes angibt. Ein Scope stellt eine Berechtigung zum Ausführen von Aktionen auf der Plattform dar. Werden keine Scopes angefragt ergibt sich der Scope aus den bei der Client-Registrierung hinterlegten Scopes. Die aktuell verfügbaren Scopes werden in einer [Übersicht](docs/scopes.md) gepflegt.
+  Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt. Es ist möglich einen eingeschränkten Zugriff anzufragen, in dem man spezifische Scopes angibt. Ein Scope stellt eine Berechtigung zum Ausführen von Aktionen auf der Plattform dar. Werden keine Scopes angefragt ergibt sich der Scope aus den bei der Client-Registrierung hinterlegten Scopes. Die aktuell verfügbaren Scopes werden in einer [Übersicht](https://github.com/europace/authorization-api/blob/master/docs/scopes.md) gepflegt.
 - ##### Akteur (`actor`)
   Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein
   [Client-Approval](Client-Approval.md#client-approval) des Akteurs für den Client vorliegen. Aktuell wird der Client-Approval automatisch bei der Registrierung für den Aktuer und alle Subjects im Zugriffsbereich des Clients erteilt .
@@ -111,12 +117,19 @@ curl --location --request POST 'https://api.europace.de/auth/token' \
 --data-urlencode 'actor=[registrierte PartnerID]'
 ```
 
- Parameter | Beschreibung
---- | ---  
-Subject |	die Partnerid des anzumeldenden Benutzers |
-Actor 	|	die Partnerid des registrierten Clients |
-Hinweis | die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. |
-Scope |	muss impersonieren enthalten (Hinweis: Wenn ein Scope angegeben wird, müssen alle erforderlichen Rechte angegeben werden, d.h. impersonieren allein macht keinen Sinn.) |
+
+Parameter | Beschreibung |
+--------- | :--- |
+Subject   | die Partnerid des anzumeldenden Benutzers
+Actor     | die Partnerid des registrierten Clients
+Hinweis   | die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen.
+Scope     | muss impersonieren enthalten (Hinweis: Wenn ein Scope angegeben wird, müssen alle erforderlichen Rechte angegeben werden, d.h. impersonieren allein macht keinen Sinn.)
+
+## Nutzungsbedingungen
+Die APIs werden unter folgenden [Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) zur Verfügung gestellt.
+
+## Support
+Bei Fragen oder Problemen kannst du dich an devsupport@europace2.de wenden.
 
 [JWT]: https://tools.ietf.org/html/rfc7519
 [ASCII]: http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-006.pdf

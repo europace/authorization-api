@@ -1,0 +1,9 @@
+# IDEA files
+.idea/
+*.iml
+
+# Build files
+build/
+target/
+classes/
+debug/
