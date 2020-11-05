@@ -2,6 +2,7 @@
 
 Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Verfügung. Sie ist eine zwingende Voraussetzung zur Verwendung von Europace APIs.
 
+
 ![Vertrieb](https://img.shields.io/badge/-Vertrieb-lightblue)
 ![Produktanbieter](https://img.shields.io/badge/-Produktanbieter-lightblue)
 ![Baufinanzierung](https://img.shields.io/badge/-Baufinanzierung-lightblue)
@@ -26,6 +27,7 @@ Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahr
 Damit du unsere APIs und deinen Anwendungsfall schnellstmöglich testen kannst, haben wir eine [Postman-Collection](https://github.com/europace/api-schnellstart) für dich zusammengestellt.
 
 ## Wie benutze ich OAuth2?
+
 Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
 
 Dabei müssen folgende Schritte durchlaufen werden:
