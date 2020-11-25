@@ -122,7 +122,7 @@ Parameter | Beschreibung |
 --------- | :--- |
 Subject   | die Partnerid des anzumeldenden Benutzers
 Actor     | die Partnerid des registrierten Clients
-Hinweis   | die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen.
+Hinweis   | die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. Es können beliebig viele Ebenen zwischen den Partnerids liegen.
 Scope     | muss impersonieren enthalten (Hinweis: Wenn ein Scope angegeben wird, müssen alle erforderlichen Rechte angegeben werden, d.h. impersonieren allein macht keinen Sinn.)
 
 ## Nutzungsbedingungen
