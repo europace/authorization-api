@@ -104,7 +104,7 @@ curl --location --request POST 'https://api.europace.de/login' \
 Example new: \
 see “How do I get an access token?”
 
-## API key (impregnation)
+## API key (impersonation)
 The impersonated API key procedure is used when the API needs the specific user and you don't want to request an API key for everyone. It is sufficient to have an organization's API key that acts as a general key and with which users to which the organization has access can be logged in.
 
 often used with these APIs:
@@ -129,7 +129,7 @@ curl --location --request POST 'https://api.europace.de/auth/token' \
 --user '[ClientID]: [ClientSecret]' \
 --header 'Content-Type: application / x-www-form-urlencoded' \
 --data-urlencode 'grant_type = client_credentials' \
---data-urlencode 'scope = impersonate construction financing: real business construction financing: process: read construction financing: event: read construction financing: request: read' \
+--data-urlencode 'scope=impersonieren baufinanzierung:echtgeschaeft baufinanzierung:vorgang:lesen baufinanzierung:ereignis:lesen baufinanzierung:antrag:lesen' \
 --data-urlencode 'subject = [PartnerID to be registered]' \
 --data-urlencode 'actor = [registered partnerID]'
 ```
