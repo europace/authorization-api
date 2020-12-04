@@ -31,7 +31,9 @@ Most HTTP clients already support OAuth2, you only have to store `Client_ID`, `C
 
 ## How do I register a client?
 
-Please contact <a href="mailto:helpdesk@europace2.de?subject=Register API-client&body=Hello,%0D%0Apls%20register%20a%20new%20API-Client%20for%20me.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Description:%0D%0Atechnical%20contact-email-adress:%0D%0Ashort%20description%20of%20the%20Usecase:%0D%0Arequired%20scopes:%0D%0A%0D%0AThank%20you">helpdesk@europace.de</a> with the following data:
+<a href="mailto:helpdesk@europace2.de?subject=Register API-client&body=Hello,%0D%0Apls%20register%20a%20new%20API-Client%20for%20me.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Description:%0D%0Atechnical%20contact-email-adress:%0D%0Ashort%20description%20of%20the%20Usecase:%0D%0Arequired%20scopes:%0D%0A%0D%0AThank%20you">[ Client-Registration ]</a>
+
+Please contact helpdesk@europace2.de with the following data:
 - EP2 partner id
 - Client name
 - Client description
