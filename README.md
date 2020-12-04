@@ -32,7 +32,7 @@ Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können mus
 
 Dabei müssen folgende Schritte durchlaufen werden:
 - Einmalig musst du deinen Client in Europace registrieren lassen, woraufhin du die `Client_ID` und das `Client-Secret` für den Client erhältst
-- Für die Anmeldung an Europace rufst du https://api.europace.de/auth/token mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen `Access_Token` zu erhalten. Die meisten HTTP Clients unterstützen OAuth2 bereits und lassen sich mit diesen Parametern konfigurieren.
+- Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen `Access_Token` zu erhalten. Die meisten HTTP Clients unterstützen OAuth2 bereits und lassen sich mit diesen Parametern konfigurieren.
 - Mit dem `Access_Token` als Bearer-Token kannst du Requests an den Europace APIs durchführen.
 Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
 
@@ -87,8 +87,7 @@ curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 --header 'Authorization: Bearer [Access_Token]
 ```
 
-In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client
-[registriert](Client-Registrierung.md#client-registrierung) ist.
+In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client registriert ist.
 
 Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
 
@@ -99,7 +98,7 @@ Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
   Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt. Es ist möglich einen eingeschränkten Zugriff anzufragen, in dem man spezifische Scopes angibt. Ein Scope stellt eine Berechtigung zum Ausführen von Aktionen auf der Plattform dar. Werden keine Scopes angefragt ergibt sich der Scope aus den bei der Client-Registrierung hinterlegten Scopes. Die aktuell verfügbaren Scopes werden in einer [Übersicht](https://github.com/europace/authorization-api/blob/master/docs/scopes.md) gepflegt.
 - ##### Akteur (`actor`)
   Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein
-  [Client-Approval](Client-Approval.md#client-approval) des Akteurs für den Client vorliegen. Aktuell wird der Client-Approval automatisch bei der Registrierung für den Aktuer und alle Subjects im Zugriffsbereich des Clients erteilt .
+  Client-Approval des Akteurs für den Client vorliegen. Aktuell wird der Client-Approval automatisch bei der Registrierung für den Aktuer und alle Subjects im Zugriffsbereich des Clients erteilt .
 - ##### Subject (`subject`)
   Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
 
