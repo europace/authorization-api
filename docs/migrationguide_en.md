@@ -31,10 +31,7 @@ Most HTTP clients already support OAuth2, you only have to store `Client_ID`, `C
 
 ## How do I register a client?
 
-
-
-
-Please contact <a href = "mailto: helpdesk@europace2.de? Subject = Registration API-Client & body = Hello,% 0D% 0Abitte% 20registered% 20a% 20API-Client% 20for% 20me.% 0D% 0A% 0D% 0APartnerID:% 0D% 0AClient name:% 0D% 0AClient description:% 0D% 0Atechnical% 20Contact email address:% 0D% 0Ashort% 20Description% 20des% 20Use case:% 0D% 0Required% 20Scopes:% 0D% 0A% 0D% 0AVielen% 20Tank "> helpdesk@europace.de </a> with the following data:
+Please contact <a href="mailto:helpdesk@europace2.de?subject=Register API-client&body=Hello,%0D%0Apls%20register%20a%20new%20API-Client%20for%20me.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Description:%0D%0Atechnical%20contact-email-adress:%0D%0Ashort%20description%20of%20the%20Usecase:%0D%0Arequired%20scopes:%0D%0A%0D%0AThank%20you">helpdesk@europace.de</a> with the following data:
 - EP2 partner id
 - Client name
 - Client description
@@ -44,9 +41,9 @@ Please contact <a href = "mailto: helpdesk@europace2.de? Subject = Registration 
 
 After a short review with the owner (Europace partner), we will register your client and provide you with the client ID and the client secret in your personal link list in Europace.
 
-! [Linksammlung.png] (https://raw.githubusercontent.com/europace/authorization-api/Migrationsguide/docs/img/Linksammlung.png "Linkammlung")
+![Linksammlung.png](https://raw.githubusercontent.com/europace/authorization-api/master/docs/img/Linksammlung.png "Linkammlung")
 
-Please note you agree to the [Europace API Terms of Use] (https://docs.api.europace.de/nutzungsbedingungen/) by using the APIs.
+Please note you agree to the [Europace API Terms of Use](https://docs.api.europace.de/nutzungsbedingungen/) by using the APIs.
 
 ## How do I get an access token?
 To log into Europace, call `https://api.europace.de/auth/token` with the` Client_ID` and the `Client_Secret` as Basic-Auth to get an Access_Token.
