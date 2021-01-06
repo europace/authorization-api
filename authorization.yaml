@@ -3,18 +3,18 @@ info:
   title: Europace Authorization API
   description: Mit diesem Service lassen sich Access Tokens von registrierten Clients anfordern um die Europace APIs zu verwenden.
   version: '0.1'
-  termsOfService: TODO
+  termsOfService: 'https://docs.api.europace.de/nutzungsbedingungen/'
   contact:
-    name: Europace Support
-    url: 'https://developer.europace.de/'
+    name: Europace AG
+    url: 'https://docs.api.europace.de/'
     email: devsupport@europace2.de
 servers:
   - url: 'https://api.europace.de/auth'
     description: Produktiv Server
 paths:
-  /access-token:
+  /token:
     post:
-      summary: Endpunkt um Access Token anzufordern
+      summary: Access Token anfordern (login)
       description: Client-Id und Client-Secret müssen per HTTP Basic Auth übergeben werden.
       parameters:
         - schema:
@@ -23,31 +23,22 @@ paths:
           in: header
           name: X-TraceId
           description: 'Frei-wählbarer String, um Debugging zu vereinfachen'
+        - schema:
+            type: string
+            default: application/x-www-form-urlencoded
+          in: header
+          name: Content-Type
+          description: ''
+          required: true
       security:
         - basicAuth: []
       requestBody:
         content:
           application/x-www-form-urlencoded:
             schema:
-              type: object
-              properties:
-                grant_type:
-                  type: string
-                  default: client_credentials
-                  description: Muss für den Client-Credentials-Flow `client_credentials` sein.
-                scope:
-                  type: string
-                  default: no-access impersonieren
-                  description: '" "-separierte Liste von Scopes'
-                subject:
-                  type: string
-                  description: Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
-                actor:
-                  type: string
-                  description: 'Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein Client-Approval des Akteurs für den Client vorliegen.'
-              required:
-                - grant_type
-                - scope
+              $ref: '#/components/schemas/loginRequest'
+            examples: {}
+        description: ''
       tags:
         - authz
       responses:
@@ -56,37 +47,110 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  access_token:
-                    type: string
-                  token_type:
-                    type: string
-                  expires_in:
-                    type: string
-                  scope:
-                    type: string
-                required:
-                  - access_token
-              examples:
-                Beispiel Response:
-                  value:
-                    access_token: I6MTU3...wet46
-                    token_type: BEARER
-                    expires_in: 3599
-                    scope: no-access
+                $ref: '#/components/schemas/loginResponse'
         '400':
           description: Bad Request. zB nicht existierende Scopes angefordert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                kein grant_type angegeben:
+                  value:
+                    error_description: 'Invalid request: Missing "grant_type" parameter'
+                    error: invalid_request
+                Actor nicht gefunden:
+                  value:
+                    error_description: 'Unauthorized client: Actor not found'
+                    error: unauthorized_client
+                falschen Scope angefordert:
+                  value:
+                    error_description: 'Invalid, unknown or malformed scope'
+                    error: invalid_scope
         '401':
           description: 'Unauthorized. Autorisierungsfehler bei den Client Credentials '
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Autorisierungsfehler:
+                  value:
+                    error_description: 'Client authentication failed: Client id unknown / deactivated or client secret invalid / expired.'
+                    error: invalid_client
         '429':
           description: Too Many Requests. Rate-Limit überschritten.
         '500':
           description: Internal Server Error. Autsch.
         '503':
           description: Service Unavailable
+    parameters: []
 components:
   securitySchemes:
     basicAuth:
       type: http
       scheme: basic
+  schemas:
+    loginResponse:
+      title: loginResponse
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: Access-Token für die Verwendung als Bearer Token in den Europace-APIs
+        token_type:
+          type: string
+          default: BEARER
+          description: Typ des Token (BEARER)
+        expires_in:
+          type: integer
+          description: Gültigkeitsdauer in Sekunden
+        scope:
+          type: string
+          description: Gültige Scopes des Access-Token
+      required:
+        - access_token
+        - token_type
+        - expires_in
+        - scope
+      x-examples:
+        Beispiel Response:
+          access_token: I6MTU3...wet46
+          token_type: BEARER
+          expires_in: 3600
+          scope: no-access
+      description: Antwort eines erfolgreichen Logins
+    loginRequest:
+      title: loginRequest
+      type: object
+      description: "Parameter für das Login. Im einfachsten Fall wird grant_type=client_credential übergeben. \n\nBeim Impersonieren müssen subject, actor und als scope impersonieren sowie alle anderen benötigten Scopes mit angebenen werden."
+      x-examples: {}
+      properties:
+        grant_type:
+          type: string
+          default: client_credentials
+          description: Muss für den Client-Credentials-Flow `client_credentials` sein.
+        scope:
+          type: string
+          default: no-access impersionieren
+          description: '" "-separierte Liste von Scopes. Wird ein Subject angegeben muss impersonieren als Scope enthalten sein. Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt. Es ist möglich einen eingeschränkten Zugriff anzufragen, in dem man spezifische Scopes angibt. Ein Scope stellt eine Berechtigung zum Ausführen von Aktionen auf der Plattform dar. Werden keine Scopes angefragt ergibt sich der Scope aus den bei der Client-Registrierung hinterlegten Scopes. Die aktuell verfügbaren Scopes werden in einer Übersicht gepflegt.'
+        subject:
+          type: string
+          description: Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
+        actor:
+          type: string
+          description: 'Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein Client-Approval des Akteurs für den Client vorliegen.'
+      required:
+        - grant_type
+    error:
+      title: error
+      type: object
+      properties:
+        error_description:
+          type: string
+        error:
+          type: string
+      required:
+        - error_description
+        - error
+      description: Inhaltliche Fehlermeldung zusätzlich zum HTTP-Fehlercode.
