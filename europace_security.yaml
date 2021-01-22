@@ -17,7 +17,7 @@ flows:
         ## Darf neue Plaketten anlegen.
       partner:plakette:lesen: |
         ## Darf Partner-Daten lesen
-      partner:plakette:schreiben: |	
+      partner:plakette:schreiben: |
         ## Darf Partner-Daten schreiben
       partner:beziehungen:lesen: |
         ## Darf Beziehungen zwischen Partnern lesen
