@@ -15,12 +15,8 @@ flows:
     scopes: # Siehe auch https://swagger.io/specification/ (OAuth Flow Object - Scopes)
       partner:plakette:anlegen: |
         ## Darf neue Plaketten anlegen.
-      partner:plakette:loeschen: |
-        ## Darf Plaketten löschen
       partner:plakette:lesen: |
         ## Darf Partner-Daten lesen
-      partner:plakette:schreiben: |
-        ## Darf Partner-Daten schreiben
       partner:beziehungen:lesen: |
         ## Darf Beziehungen zwischen Partnern lesen
         Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen
