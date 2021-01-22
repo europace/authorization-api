@@ -9,7 +9,9 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | Name | Beschreibung  |
 | --- | ---  |
 | ` partner:plakette:anlegen ` |   Darf neue Plaketten anlegen.  |
+| ` partner:plakette:loeschen ` |   Darf Plaketten löschen  |
 | ` partner:plakette:lesen ` |   Darf Partner-Daten lesen  |
+| ` partner:plakette:schreiben ` |   Darf Partner-Daten schreiben  |
 | ` partner:beziehungen:lesen ` |   Darf Beziehungen zwischen Partnern lesen Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen  |
 | ` partner:beziehungen:schreiben ` |   Darf Beziehungen zwischen Partnern schreiben Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare zu schreiben  |
 | ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
