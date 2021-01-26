@@ -120,8 +120,8 @@ curl --location --request POST 'https://api.europace.de/auth/token' \
 Parameter | Beschreibung |
 --------- | :--- |
 Subject   | die PartnerID des anzumeldenden Benutzers
-Actor     | die PartnerID des registrierten Clients<br/><br/>Hinweis: Die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. Es können beliebig viele Ebenen zwischen den Partnerids liegen.
-Scope     | benötigten Scopes des Tokens<br/><br/>Hinweis: Der Scope `impersonieren` muss immer enthalten sein. Alle angegebenen Scopes müssen beim Client aktiviert sein.
+Actor     | die PartnerID des registrierten Clients<br/><br/>**Hinweis**: Die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. Es können beliebig viele Ebenen zwischen den Partnerids liegen.
+Scope     | benötigten Scopes des Tokens<br/><br/>**Hinweis**: Der Scope `impersonieren` muss immer enthalten sein. Alle angegebenen Scopes müssen beim Client aktiviert sein.
 
 ## Nutzungsbedingungen
 Die APIs werden unter folgenden [Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) zur Verfügung gestellt.
