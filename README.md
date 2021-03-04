@@ -76,19 +76,6 @@ Response:
 
 In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client registriert ist. Weitere Anwendungsfälle werden in “Alte Welt - neue Welt” behandelt.
 
-## Wie rufe ich eine API mit Access-Token auf?
-Mit dem Access_Token als Bearer-Token kannst du Requests an den Europace APIs durchführen.
-Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
-
-Am Beispiel der Vorgaenge-API in curl:
-```cURL
-curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer [Access_Token]
-```
-
-In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client registriert ist.
-
 Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
 
 - ##### Grant-Type (`grant_type`)
@@ -101,6 +88,17 @@ Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
   Client-Approval des Akteurs für den Client vorliegen. Aktuell wird der Client-Approval automatisch bei der Registrierung für den Aktuer und alle Subjects im Zugriffsbereich des Clients erteilt .
 - ##### Subject (`subject`)
   Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
+
+## Wie rufe ich eine API mit Access-Token auf?
+Mit dem Access_Token als Bearer-Token kannst du Requests an den Europace APIs durchführen.
+Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
+
+Am Beispiel der Vorgaenge-API in curl:
+```cURL
+curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer [Access_Token]
+```
 
 ## Wie authentifiziere ich verschiedene Benutzer mit einem Client? (Impersionieren)
 
