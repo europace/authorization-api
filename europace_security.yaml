@@ -62,6 +62,8 @@ flows:
         ## Produktanbieter lesen
       baufinanzierung:produktanbieter:schreiben: |
         ## Produktanbieter schreiben
+      baufinanzierung:log:schreiben: |
+        ## Log schreiben
 
       privatkredit:angebot:ermitteln: |
         ## Kreditsmartangebote ermitteln
