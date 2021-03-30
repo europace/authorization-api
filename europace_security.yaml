@@ -110,11 +110,11 @@ flows:
         ## Impersonieren
         Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.
       openid: |
-        ## Benutzer anmelden
-        Der Benutzers kann automatisch angemeldet werden.
+        ## Benutzer-Identität überprüfen
+        Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.
       profile: |
         ## Benutzer-Profil lesen
-        Profildaten des angemeldeten Benutzers können abgerufen werden.
+        Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.
 
     requiredAuthorities:
       baufinanzierung:echtgeschaeft:

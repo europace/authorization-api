@@ -43,5 +43,5 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` unterlagen:freigabe:lesen ` |  Freigegebene Unterlagen lesen  |   Freigegebene Unterlagen zu einem Antrag können abgerufen werden.  |
 | ` unterlagen:freigabe:schreiben ` |  Freigegebene Unterlagen aktualisieren  |   Der Status einer freigegeben Unterlagen kann verändert werden, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.  |
 | ` impersonieren ` |  Impersonieren  |   Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.  |
-| ` openid ` |  Benutzer anmelden  |   Der Benutzers kann automatisch angemeldet werden.  |
-| ` profile ` |  Benutzer-Profil lesen  |   Profildaten des angemeldeten Benutzers können abgerufen werden.  |
+| ` openid ` |  Benutzer-Identität überprüfen  |   Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.  |
+| ` profile ` |  Benutzer-Profil lesen  |   Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.  |
