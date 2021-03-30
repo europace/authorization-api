@@ -35,13 +35,13 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge verändern  |   Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.  |
 | ` privatkredit:vorgang:lesen ` |  KreditSmart-Vorgänge lesen  |    |
 | ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen  |    |
-| ` unterlagen:dokument:lesen ` |  Unterlagen-Dokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |
-| ` unterlagen:dokument:schreiben ` |  Unterlagen-Dokumente hinzufügen und kategorisieren  |   Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
-| ` unterlagen:unterlage:lesen ` |  Unterlagen lesen  |   Kategorisierten Dokumente (Unterlagen) können abgerufen werden.  |
-| ` unterlagen:unterlage:schreiben ` |  Unterlagen neu zuordnen  |   Die Kategorie und der Bezug der Unterlagen kann geändert werden.  |
+| ` unterlagen:dokument:lesen ` |  Unterlagendokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |
+| ` unterlagen:dokument:schreiben ` |  Unterlagendokumente hinzufügen und kategorisieren  |   Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
+| ` unterlagen:unterlage:lesen ` |  Unterlagen lesen  |   Kategorisierte Dokumente (Unterlagen) können abgerufen werden.  |
+| ` unterlagen:unterlage:schreiben ` |  Unterlagen neu zuordnen  |   Die Kategorie und der Bezug der Unterlagen können geändert werden.  |
 | ` unterlagen:unterlage:freigeben ` |  Unterlagen freigeben  |   Unterlagen für einen Antrag können freigeben werden.  |
 | ` unterlagen:freigabe:lesen ` |  Freigegebene Unterlagen lesen  |   Freigegebene Unterlagen zu einem Antrag können abgerufen werden.  |
 | ` unterlagen:freigabe:schreiben ` |  Freigegebene Unterlagen aktualisieren  |   Der Status einer freigegeben Unterlagen kann verändert werden, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.  |
 | ` impersonieren ` |  Impersonieren  |   Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.  |
 | ` openid ` |  Benutzer-Identität überprüfen  |   Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.  |
-| ` profile ` |  Benutzer-Profil lesen  |   Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.  |
+| ` profile ` |  Benutzeprofil lesen  |   Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.  |
