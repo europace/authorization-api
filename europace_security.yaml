@@ -95,7 +95,7 @@ flows:
         Kategorisierten Dokumente (Unterlagen) können abgerufen werden.
       unterlagen:unterlage:schreiben: |
         ## Unterlagen neu zuordnen
-        Die Kategorie und der Bezug der Unterlagen kann geändert werden.
+        Die Kategorie und der Bezug der Unterlagen können geändert werden.
       unterlagen:unterlage:freigeben: |
         ## Unterlagen freigeben
         Unterlagen für einen Antrag können freigeben werden.
