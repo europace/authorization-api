@@ -85,7 +85,7 @@ flows:
         ## KreditSmart-Vorgänge anlegen
 
       unterlagen:dokument:lesen: |
-        ## Unterlagen-Dokumente herunterladen
+        ## Unterlagendokumente herunterladen
         Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.
       unterlagen:dokument:schreiben: |
         ## Unterlagendokumente hinzufügen und kategorisieren
