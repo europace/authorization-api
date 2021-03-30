@@ -92,7 +92,7 @@ flows:
         Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
-        Kategorisierten Dokumente (Unterlagen) können abgerufen werden.
+        Kategorisierte Dokumente (Unterlagen) können abgerufen werden.
       unterlagen:unterlage:schreiben: |
         ## Unterlagen neu zuordnen
         Die Kategorie und der Bezug der Unterlagen können geändert werden.
