@@ -88,7 +88,7 @@ flows:
         ## Unterlagen-Dokumente herunterladen
         Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.
       unterlagen:dokument:schreiben: |
-        ## Unterlagen-Dokumente hinzufügen und kategorisieren
+        ## Unterlagendokumente hinzufügen und kategorisieren
         Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
