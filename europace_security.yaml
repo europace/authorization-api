@@ -14,99 +14,107 @@ flows:
     tokenUrl: https://api.europace.de/auth/token
     scopes: # Siehe auch https://swagger.io/specification/ (OAuth Flow Object - Scopes)
       partner:plakette:anlegen: |
-        ## Darf neue Plaketten anlegen.
+        ## Partner anlegen
+        Neue Organisationen oder Personen können erstellt werden.
       partner:plakette:lesen: |
-        ## Darf Partner-Daten lesen
+        ## Partner lesen
       partner:plakette:schreiben: |
-        ## Darf Partner-Daten schreiben
+        ## Partner verändern
       partner:beziehungen:lesen: |
-        ## Darf Beziehungen zwischen Partnern lesen
-        Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen
+        ## Partner-Beziehungen lesen
+        Zugriffs- und Einstellungsrechte können abgerufen werden.
       partner:rechte:lesen: |
-        ## Darf Rechte eines Partners lesen
+        ## Partner-Rechte lesen
       partner:rechte:schreiben: |
-        ## Darf Rechte eines Partners schreiben
-
+        ## Partner-Rechte verändern
+        
       report:rohdaten:lesen: |
-        ## Darf den Rohdaten-Report runterladen
+        ## Vertriebs-Rohdaten-Report abrufen
       report:produktanbieter:lesen: |
-        ## Darf den Produktanbieter-Report runterladen
+        ## Produktanbieter-Report abrufen
 
       baufinanzierung:echtgeschaeft: |
-        ## Baufinanzierung-Echtgeschäft bearbeiten
+        ## BaufiSmart-Echtgeschäft bearbeiten
       baufinanzierung:vorgang:lesen: |
-        ## Baufinanzierungsvorgänge lesen
+        ## BaufiSmart-Vorgänge lesen
       baufinanzierung:vorgang:schreiben: |
-        ## Baufinanzierungsvorgänge schreiben
+        ## BaufiSmart-Vorgänge anlegen
       baufinanzierung:angebot:ermitteln: |
-        ## Baufinanzierungsangebote ermitteln
+        ## BaufiSmart-Angebote ermitteln
       baufinanzierung:angebot:loeschen: |
-        ## Baufinanzierungsangebote loeschen
+        ## gespeicherte BaufiSmart-Angebote löschen
       baufinanzierung:ereignis:lesen: |
-        ## Baufinanzierungsereignisse lesen
+        ## BaufiSmart-Ereignisse lesen
       baufinanzierung:antrag:lesen: |
-        ## Baufinanzierungsanträge lesen
+        ## BaufiSmart-Anträge lesen
       baufinanzierung:antrag:schreiben: |
-        ## Baufinanzierungsanträge schreiben
+        ## BaufiSmart-Anträge verändern
+        Der Antragsstatus und der Sachbearbeiter können verändert sowie die Produktanbieter-Renferenz ergänzt werden.
+      
       baufinanzierung:produktkonfiguration:lesen: |
         ## Produktkonfiguration lesen
+        für Product-Cockpit
       baufinanzierung:produktkonfiguration:schreiben: |
-        ## Produktkonfiguration schreiben
+        ## Produktkonfiguration verändern
+        für Product-Cockpit
       baufinanzierung:produktkonfiguration:freigeben: |
         ## Produktkonfiguration freigeben
+        für Product-Cockpit
       baufinanzierung:produkt:lesen: |
         ## Produkt lesen
+        für Product-Cockpit
       baufinanzierung:produkt:schreiben: |
-        ## Produkt schreiben
+        ## Produkt verändern
+        für Product-Cockpit
       baufinanzierung:produktanbieter:lesen: |
         ## Produktanbieter lesen
+        für Product-Cockpit
       baufinanzierung:produktanbieter:schreiben: |
-        ## Produktanbieter schreiben
+        ## Produktanbieter verändern
+        für Product-Cockpit
 
       privatkredit:angebot:ermitteln: |
-        ## Kreditsmartangebote ermitteln
-        Der Client kann Ratenkredit-Angebote und Schaufensterkonditionen ermitteln.
+        ## KreditSmart-Angebote ermitteln
+        Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.
       privatkredit:antrag:schreiben: |
-        ## Kreditsmartanträge schreiben
-        Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen.
+        ## KreditSmart-Anträge verändern
+        Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.
       privatkredit:vorgang:lesen: |
-        ## Kreditsmartvorgänge lesen
-        Der Client kann KreditSmart-Vorgänge automatisiert auslesen.
+        ## KreditSmart-Vorgänge lesen
       privatkredit:vorgang:schreiben: |
-        ## Kreditsmartvorgänge schreiben
-        Der Client kann KreditSmart-Vorgänge automatisiert anlegen.
+        ## KreditSmart-Vorgänge anlegen
 
       unterlagen:dokument:lesen: |
-        ## Dokumente lesen
-        Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.
+        ## Unterlagendokumente herunterladen
+        Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.
       unterlagen:dokument:schreiben: |
-        ## Dokumente schreiben und kategorisieren
-        Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
+        ## Unterlagendokumente hinzufügen und kategorisieren
+        Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.
       unterlagen:unterlage:lesen: |
         ## Unterlagen lesen
-        Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.
+        Kategorisierte Dokumente (Unterlagen) können abgerufen werden.
       unterlagen:unterlage:schreiben: |
         ## Unterlagen neu zuordnen
-        Der Client kann die Kategorie und den Bezug der Unterlagen ändern.
+        Die Kategorie und der Bezug der Unterlagen können geändert werden.
       unterlagen:unterlage:freigeben: |
         ## Unterlagen freigeben
-        Der Client kann Unterlagen für einen Antrag freigeben.
+        Unterlagen für einen Antrag können freigeben werden.
       unterlagen:freigabe:lesen: |
         ## Freigegebene Unterlagen lesen
-        Der Client kann freigegebene Unterlagen zu einem Antrag abrufen
+        Freigegebene Unterlagen zu einem Antrag können abgerufen werden.
       unterlagen:freigabe:schreiben: |
         ## Freigegebene Unterlagen aktualisieren
-        Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
+        Der Status einer freigegeben Unterlagen kann verändert werden, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
 
       impersonieren: |
-        ## Darf Impersonieren
-        Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.
+        ## Impersonieren
+        Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.
       openid: |
-        ## Benutzer-Login durchführen
-        Der Client kann das Login des Benutzers auf der Plattform mittels OpenID Connect anfordern und die Identität des Benutzers abrufen.
+        ## Benutzer-Identität überprüfen
+        Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.
       profile: |
-        ## Benutzerprofil lesen
-        Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.
+        ## Benutzeprofil lesen
+        Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.
 
     requiredAuthorities:
       baufinanzierung:echtgeschaeft:

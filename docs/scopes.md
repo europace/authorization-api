@@ -6,42 +6,42 @@ Mit Hilfe der Scopes kannst du genau angeben, welche Art von Zugriff du benötig
 
 Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 
-| Name | Beschreibung  |
-| --- | ---  |
-| ` partner:plakette:anlegen ` |   Darf neue Plaketten anlegen.  |
-| ` partner:plakette:lesen ` |   Darf Partner-Daten lesen  |
-| ` partner:plakette:schreiben ` |   Darf Partner-Daten schreiben  |
-| ` partner:beziehungen:lesen ` |   Darf Beziehungen zwischen Partnern lesen Erlaubt es unter anderem UebernahmeRecht, Administrierbare und Uebernehmbare abzurufen  |
-| ` partner:rechte:lesen ` |   Darf Rechte eines Partners lesen  |
-| ` partner:rechte:schreiben ` |   Darf Rechte eines Partners schreiben  |
-| ` report:rohdaten:lesen ` |   Darf den Rohdaten-Report runterladen  |
-| ` report:produktanbieter:lesen ` |   Darf den Produktanbieter-Report runterladen  |
-| ` baufinanzierung:echtgeschaeft ` |   Baufinanzierung-Echtgeschäft bearbeiten  |
-| ` baufinanzierung:vorgang:lesen ` |   Baufinanzierungsvorgänge lesen  |
-| ` baufinanzierung:vorgang:schreiben ` |   Baufinanzierungsvorgänge schreiben  |
-| ` baufinanzierung:angebot:ermitteln ` |   Baufinanzierungsangebote ermitteln  |
-| ` baufinanzierung:angebot:loeschen ` |   Baufinanzierungsangebote loeschen  |
-| ` baufinanzierung:ereignis:lesen ` |   Baufinanzierungsereignisse lesen  |
-| ` baufinanzierung:antrag:lesen ` |   Baufinanzierungsanträge lesen  |
-| ` baufinanzierung:antrag:schreiben ` |   Baufinanzierungsanträge schreiben  |
-| ` baufinanzierung:produktkonfiguration:lesen ` |   Produktkonfiguration lesen  |
-| ` baufinanzierung:produktkonfiguration:schreiben ` |   Produktkonfiguration schreiben  |
-| ` baufinanzierung:produktkonfiguration:freigeben ` |   Produktkonfiguration freigeben  |
-| ` baufinanzierung:produkt:lesen ` |   Produkt lesen  |
-| ` baufinanzierung:produkt:schreiben ` |   Produkt schreiben  |
-| ` baufinanzierung:produktanbieter:lesen ` |   Produktanbieter lesen  |
-| ` baufinanzierung:produktanbieter:schreiben ` |   Produktanbieter schreiben  |
-| ` privatkredit:angebot:ermitteln ` |   Kreditsmartangebote ermitteln Der Client kann Ratenkredit-Angebote und Schaufensterkonditionen ermitteln.  |
-| ` privatkredit:antrag:schreiben ` |   Kreditsmartanträge schreiben Der Client kann den Antragsstatus verändern oder den aktuellen Status um Zusatzinformationen ergänzen.  |
-| ` privatkredit:vorgang:lesen ` |   Kreditsmartvorgänge lesen Der Client kann KreditSmart-Vorgänge automatisiert auslesen.  |
-| ` privatkredit:vorgang:schreiben ` |   Kreditsmartvorgänge schreiben Der Client kann KreditSmart-Vorgänge automatisiert anlegen.  |
-| ` unterlagen:dokument:lesen ` |   Dokumente lesen Der Client kann hochgeladene Dokumente eines Vorgangs abrufen.  |
-| ` unterlagen:dokument:schreiben ` |   Dokumente schreiben und kategorisieren Der Client kann Dokumente zu einem Vorgang hochladen, umbenennen, löschen und die Kategorisierung anstoßen, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
-| ` unterlagen:unterlage:lesen ` |   Unterlagen lesen Der Client kann die kategorisierten Dokumente (Unterlagen) abrufen.  |
-| ` unterlagen:unterlage:schreiben ` |   Unterlagen neu zuordnen Der Client kann die Kategorie und den Bezug der Unterlagen ändern.  |
-| ` unterlagen:unterlage:freigeben ` |   Unterlagen freigeben Der Client kann Unterlagen für einen Antrag freigeben.  |
-| ` unterlagen:freigabe:lesen ` |   Freigegebene Unterlagen lesen Der Client kann freigegebene Unterlagen zu einem Antrag abrufen  |
-| ` unterlagen:freigabe:schreiben ` |   Freigegebene Unterlagen aktualisieren Der Client kann den Status einer freigegeben Unterlagen setzen, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.  |
-| ` impersonieren ` |   Darf Impersonieren Eine Aktion wird im Namen eines Partners ausgeführt wobei die Autorisierung des Clients durch einen übergeordneten Partner erfolgt.  |
-| ` openid ` |   Benutzer-Login durchführen Der Client kann das Login des Benutzers auf der Plattform mittels OpenID Connect anfordern und die Identität des Benutzers abrufen.  |
-| ` profile ` |   Benutzerprofil lesen Der Client kann zusätzlich zur Identität (Partner ID) Profildaten des eingeloggten Benutzers abrufen.  |
+| Scope | Name | Beschreibung  |
+|-------|------|---------------| 
+| ` partner:plakette:anlegen ` |  Partner anlegen  |   Neue Organisationen oder Personen können erstellt werden.  |
+| ` partner:plakette:lesen ` |  Partner lesen  |    |
+| ` partner:plakette:schreiben ` |  Partner verändern  |    |
+| ` partner:beziehungen:lesen ` |  Partner-Beziehungen lesen  |   Zugriffs- und Einstellungsrechte können abgerufen werden.  |
+| ` partner:rechte:lesen ` |  Partner-Rechte lesen  |    |
+| ` partner:rechte:schreiben ` |  Partner-Rechte verändern  |    |
+| ` report:rohdaten:lesen ` |  Vertriebs-Rohdaten-Report abrufen  |    |
+| ` report:produktanbieter:lesen ` |  Produktanbieter-Report abrufen  |    |
+| ` baufinanzierung:echtgeschaeft ` |  BaufiSmart-Echtgeschäft bearbeiten  |    |
+| ` baufinanzierung:vorgang:lesen ` |  BaufiSmart-Vorgänge lesen  |    |
+| ` baufinanzierung:vorgang:schreiben ` |  BaufiSmart-Vorgänge anlegen  |    |
+| ` baufinanzierung:angebot:ermitteln ` |  BaufiSmart-Angebote ermitteln  |    |
+| ` baufinanzierung:angebot:loeschen ` |  gespeicherte BaufiSmart-Angebote löschen  |    |
+| ` baufinanzierung:ereignis:lesen ` |  BaufiSmart-Ereignisse lesen  |    |
+| ` baufinanzierung:antrag:lesen ` |  BaufiSmart-Anträge lesen  |    |
+| ` baufinanzierung:antrag:schreiben ` |  BaufiSmart-Anträge verändern  |   Der Antragsstatus und der Sachbearbeiter können verändert sowie die Produktanbieter-Renferenz ergänzt werden.  |
+| ` baufinanzierung:produktkonfiguration:lesen ` |  Produktkonfiguration lesen  |   für Product-Cockpit  |
+| ` baufinanzierung:produktkonfiguration:schreiben ` |  Produktkonfiguration verändern  |   für Product-Cockpit  |
+| ` baufinanzierung:produktkonfiguration:freigeben ` |  Produktkonfiguration freigeben  |   für Product-Cockpit  |
+| ` baufinanzierung:produkt:lesen ` |  Produkt lesen  |   für Product-Cockpit  |
+| ` baufinanzierung:produkt:schreiben ` |  Produkt verändern  |   für Product-Cockpit  |
+| ` baufinanzierung:produktanbieter:lesen ` |  Produktanbieter lesen  |   für Product-Cockpit  |
+| ` baufinanzierung:produktanbieter:schreiben ` |  Produktanbieter verändern  |   für Product-Cockpit  |
+| ` privatkredit:angebot:ermitteln ` |  KreditSmart-Angebote ermitteln  |   Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.  |
+| ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge verändern  |   Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.  |
+| ` privatkredit:vorgang:lesen ` |  KreditSmart-Vorgänge lesen  |    |
+| ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen  |    |
+| ` unterlagen:dokument:lesen ` |  Unterlagendokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |
+| ` unterlagen:dokument:schreiben ` |  Unterlagendokumente hinzufügen und kategorisieren  |   Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
+| ` unterlagen:unterlage:lesen ` |  Unterlagen lesen  |   Kategorisierte Dokumente (Unterlagen) können abgerufen werden.  |
+| ` unterlagen:unterlage:schreiben ` |  Unterlagen neu zuordnen  |   Die Kategorie und der Bezug der Unterlagen können geändert werden.  |
+| ` unterlagen:unterlage:freigeben ` |  Unterlagen freigeben  |   Unterlagen für einen Antrag können freigeben werden.  |
+| ` unterlagen:freigabe:lesen ` |  Freigegebene Unterlagen lesen  |   Freigegebene Unterlagen zu einem Antrag können abgerufen werden.  |
+| ` unterlagen:freigabe:schreiben ` |  Freigegebene Unterlagen aktualisieren  |   Der Status einer freigegeben Unterlagen kann verändert werden, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.  |
+| ` impersonieren ` |  Impersonieren  |   Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.  |
+| ` openid ` |  Benutzer-Identität überprüfen  |   Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.  |
+| ` profile ` |  Benutzeprofil lesen  |   Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.  |

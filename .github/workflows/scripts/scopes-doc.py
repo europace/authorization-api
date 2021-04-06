@@ -15,12 +15,13 @@ Mit Hilfe der Scopes kannst du genau angeben, welche Art von Zugriff du benötig
 
 Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 
-| Name | Beschreibung  |
-| --- | ---  |"""
+| Scope | Name | Beschreibung  |
+|-------|------|---------------| """
 
     print(intro)
     for scope in scopes:
-        print('| `', scope, '` | ', scopes[scope].replace('##', '').replace('\n', ' ').replace('\r', '').rstrip(), ' |')
+        sep = scopes[scope].find('\n')
+        print('| `', scope.strip(), '` | ', scopes[scope][:sep].replace('##', '').strip(), ' | ', scopes[scope][sep:].replace('##', '').replace('\n', ' ').replace('\r', '').rstrip(), ' |')
 
 def printScopes(inputfile):
     with open(inputfile) as stream:
