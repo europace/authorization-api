@@ -35,6 +35,8 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge verändern  |   Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.  |
 | ` privatkredit:vorgang:lesen ` |  KreditSmart-Vorgänge lesen  |    |
 | ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen  |    |
+| ` dokumente:dokument:lesen ` |  Dokumente herunterladen  |   Dokumente können aus einem Vorgang oder Antrag gelesen (heruntergeladen) werden  |
+| ` dokumente:dokument:schreiben ` |  Dokumente hinzufügen  |   Dokumente können zu einem Vorgang oder Antrag hinzugefügt (hochgeladen) werden  |
 | ` unterlagen:dokument:lesen ` |  Unterlagendokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |
 | ` unterlagen:dokument:schreiben ` |  Unterlagendokumente hinzufügen und kategorisieren  |   Dokumente zu einem Vorgang können hochladen, umbenannt, gelöscht und die Kategorisierung gestartet werden, damit die Dokumente in der Unterlagenakte zu Verfügung stehen.  |
 | ` unterlagen:unterlage:lesen ` |  Unterlagen lesen  |   Kategorisierte Dokumente (Unterlagen) können abgerufen werden.  |
