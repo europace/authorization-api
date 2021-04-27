@@ -12,6 +12,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:plakette:lesen ` |  Partner lesen  |    |
 | ` partner:plakette:schreiben ` |  Partner verändern  |    |
 | ` partner:beziehungen:lesen ` |  Partner-Beziehungen lesen  |   Zugriffs- und Einstellungsrechte können abgerufen werden.  |
+| ` partner:beziehungen:schreiben ` |  Partner-Beziehungen schreiben  |   Zugriffsrechte können vergeben werden.  |
 | ` partner:rechte:lesen ` |  Partner-Rechte lesen  |    |
 | ` partner:rechte:schreiben ` |  Partner-Rechte verändern  |    |
 | ` report:rohdaten:lesen ` |  Vertriebs-Rohdaten-Report abrufen  |    |
