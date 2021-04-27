@@ -23,6 +23,9 @@ flows:
       partner:beziehungen:lesen: |
         ## Partner-Beziehungen lesen
         Zugriffs- und Einstellungsrechte können abgerufen werden.
+      partner:beziehungen:schreiben: |
+        ## Partner-Beziehungen schreiben
+        Zugriffsrechte können vergeben werden.
       partner:rechte:lesen: |
         ## Partner-Rechte lesen
       partner:rechte:schreiben: |
