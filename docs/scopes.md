@@ -35,7 +35,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` privatkredit:angebot:ermitteln ` |  KreditSmart-Angebote ermitteln  |   Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.  |
 | ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge verändern  |   Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.  |
 | ` privatkredit:vorgang:lesen ` |  KreditSmart-Vorgänge lesen  |    |
-| ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen  |    |
+| ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge schreiben  |  Vorgänge anlegen und verändern  |
 | ` dokumente:dokument:lesen ` |  Dokumente herunterladen  |   Dokumente können aus einem Vorgang oder Antrag gelesen (heruntergeladen) werden  |
 | ` dokumente:dokument:schreiben ` |  Dokumente hinzufügen  |   Dokumente können zu einem Vorgang oder Antrag hinzugefügt (hochgeladen) werden  |
 | ` unterlagen:dokument:lesen ` |  Unterlagendokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |

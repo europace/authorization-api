@@ -85,7 +85,8 @@ flows:
       privatkredit:vorgang:lesen: |
         ## KreditSmart-Vorgänge lesen
       privatkredit:vorgang:schreiben: |
-        ## KreditSmart-Vorgänge anlegen
+        ## KreditSmart-Vorgänge schreiben
+        Vorgänge anlegen und verändern
 
       dokumente:dokument:lesen: |
         ## Dokumente herunterladen
