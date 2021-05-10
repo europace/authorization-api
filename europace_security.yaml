@@ -80,12 +80,13 @@ flows:
         ## KreditSmart-Angebote ermitteln
         Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.
       privatkredit:antrag:schreiben: |
-        ## KreditSmart-Anträge verändern
-        Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.
+        ## KreditSmart-Anträge anlegen/verändern
+        Anträge anlegen (annehmen) oder verändern (z.B. Antragsstatus).
       privatkredit:vorgang:lesen: |
         ## KreditSmart-Vorgänge lesen
       privatkredit:vorgang:schreiben: |
-        ## KreditSmart-Vorgänge anlegen
+        ## KreditSmart-Vorgänge anlegen/verändern
+        Vorgänge anlegen oder verändern.
 
       dokumente:dokument:lesen: |
         ## Dokumente herunterladen
