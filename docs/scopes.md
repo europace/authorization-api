@@ -33,9 +33,9 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufinanzierung:produktanbieter:lesen ` |  Produktanbieter lesen  |   für Product-Cockpit  |
 | ` baufinanzierung:produktanbieter:schreiben ` |  Produktanbieter verändern  |   für Product-Cockpit  |
 | ` privatkredit:angebot:ermitteln ` |  KreditSmart-Angebote ermitteln  |   Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.  |
-| ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge verändern  |   Der Antragsstatus kann verändert oder der aktuelle Status um Zusatzinformationen ergänzt werden.  |
+| ` privatkredit:antrag:schreiben ` |  KreditSmart-Anträge anlegen/verändern  |   Anträge anlegen (annehmen) oder verändern (z.B. Antragsstatus).  |
 | ` privatkredit:vorgang:lesen ` |  KreditSmart-Vorgänge lesen  |    |
-| ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen  |    |
+| ` privatkredit:vorgang:schreiben ` |  KreditSmart-Vorgänge anlegen/verändern  |   Vorgänge anlegen oder verändern.  |
 | ` dokumente:dokument:lesen ` |  Dokumente herunterladen  |   Dokumente können aus einem Vorgang oder Antrag gelesen (heruntergeladen) werden  |
 | ` dokumente:dokument:schreiben ` |  Dokumente hinzufügen  |   Dokumente können zu einem Vorgang oder Antrag hinzugefügt (hochgeladen) werden  |
 | ` unterlagen:dokument:lesen ` |  Unterlagendokumente herunterladen  |   Hochgeladene Dokumente eines Vorgangs können heruntergeladen werden.  |
