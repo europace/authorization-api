@@ -17,8 +17,9 @@ Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Ve
 [![YAML](https://img.shields.io/badge/OAS-HTML_Doc-lightblue)](https://europace.github.io/authorization-api/oas-doc.html)
 [![YAML](https://img.shields.io/badge/OAS-YAML-lightgrey)](https://github.com/europace/authorization-api/blob/master/authorization.yaml)
 
-**Migrationsguide** \
-Als Unterstützung für den Wechsel von den bisherigen Authentifizierungsverfahre auf OAuth2 gibt es diesen [Migrationsguide](https://docs.api.europace.de/baufinanzierung/authentifizierung/oauth-migrationsguide) ([english version](https://docs.api.europace.de/baufinanzierung/authentifizierung/oauth-migrationsguide_en)).
+**weitere Artikel** 
+* Migrationsguide [deutsch](https://docs.api.europace.de/baufinanzierung/authentifizierung/oauth-migrationsguide) / [english](https://docs.api.europace.de/baufinanzierung/authentifizierung/oauth-migrationsguide_en).
+* HowTo implement [auth-code-flow (english)](https://docs.api.europace.de/baufinanzierung/authentifizierung/oauth-code-flow_en/)
 
 ## Anwendungsfälle
 - Benutzer anmelden, um Europace-APIs zu verwenden
