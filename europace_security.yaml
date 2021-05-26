@@ -30,7 +30,10 @@ flows:
         ## Partner-Rechte lesen
       partner:rechte:schreiben: |
         ## Partner-Rechte verändern
-        
+      partner:zugang:silent-sign-on: |
+        ## Silent-Sign-On
+        Der Benutzer kann über die Silent-Sign-On API eingeloggt werden.
+
       report:rohdaten:lesen: |
         ## Vertriebs-Rohdaten-Report abrufen
       report:produktanbieter:lesen: |
