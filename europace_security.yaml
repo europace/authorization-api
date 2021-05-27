@@ -32,7 +32,7 @@ flows:
         ## Partner-Rechte verändern
       partner:zugang:silent-sign-on: |
         ## Silent-Sign-On erlaubt
-        Der Benutzer kann über die Silent-Sign-On API eingeloggt werden.
+        Ermöglicht das öffnen von Europace im Browser ohne Passwortabfrage.
 
       report:rohdaten:lesen: |
         ## Vertriebs-Rohdaten-Report abrufen
