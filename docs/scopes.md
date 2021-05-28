@@ -15,6 +15,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` partner:beziehungen:schreiben ` |  Partner-Beziehungen schreiben  |   Zugriffsrechte können vergeben werden.  |
 | ` partner:rechte:lesen ` |  Partner-Rechte lesen  |    |
 | ` partner:rechte:schreiben ` |  Partner-Rechte verändern  |    |
+| ` partner:zugang:silent-sign-in ` |  Silent-Sign-In erlaubt  |   Ermöglicht das öffnen von Europace im Browser ohne Passwortabfrage.  |
 | ` report:rohdaten:lesen ` |  Vertriebs-Rohdaten-Report abrufen  |    |
 | ` report:produktanbieter:lesen ` |  Produktanbieter-Report abrufen  |    |
 | ` baufinanzierung:echtgeschaeft ` |  BaufiSmart-Echtgeschäft bearbeiten  |    |
