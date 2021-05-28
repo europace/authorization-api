@@ -31,7 +31,7 @@ flows:
       partner:rechte:schreiben: |
         ## Partner-Rechte verändern
       partner:zugang:silent-sign-on: |partner:login:silent-sign-in
-        ## Silent-Sign-On erlaubt
+        ## Silent-Sign-In erlaubt
         Ermöglicht das öffnen von Europace im Browser ohne Passwortabfrage.
 
       report:rohdaten:lesen: |
