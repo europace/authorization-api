@@ -127,7 +127,7 @@ flows:
         ## Benutzer-Identität überprüfen
         Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.
       profile: |
-        ## Benutzeprofil lesen
+        ## Benutzerprofil lesen
         Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.
 
     requiredAuthorities:
