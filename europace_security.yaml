@@ -45,6 +45,8 @@ flows:
         ## BaufiSmart-Vorgänge lesen
       baufinanzierung:vorgang:schreiben: |
         ## BaufiSmart-Vorgänge anlegen
+      baufinanzierung:vorgang:loeschen: |
+        ## BaufiSmart-Vorgänge löschen
       baufinanzierung:angebot:ermitteln: |
         ## BaufiSmart-Angebote ermitteln
       baufinanzierung:angebot:loeschen: |

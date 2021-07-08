@@ -21,6 +21,7 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` baufinanzierung:echtgeschaeft ` |  BaufiSmart-Echtgeschäft bearbeiten  |    |
 | ` baufinanzierung:vorgang:lesen ` |  BaufiSmart-Vorgänge lesen  |    |
 | ` baufinanzierung:vorgang:schreiben ` |  BaufiSmart-Vorgänge anlegen  |    |
+| ` baufinanzierung:vorgang:loeschen ` |  BaufiSmart-Vorgänge löschen  |    |
 | ` baufinanzierung:angebot:ermitteln ` |  BaufiSmart-Angebote ermitteln  |    |
 | ` baufinanzierung:angebot:loeschen ` |  gespeicherte BaufiSmart-Angebote löschen  |    |
 | ` baufinanzierung:ereignis:lesen ` |  BaufiSmart-Ereignisse lesen  |    |
