@@ -47,6 +47,7 @@ flows:
         ## BaufiSmart-Vorgänge anlegen
       baufinanzierung:vorgang:loeschen: |
         ## BaufiSmart-Vorgänge löschen
+        Nur Vorgänge im Lead-Status können gelöscht werden.
       baufinanzierung:angebot:ermitteln: |
         ## BaufiSmart-Angebote ermitteln
       baufinanzierung:angebot:loeschen: |
