@@ -49,3 +49,16 @@ Die nachfolgende Tabelle stellt eine Liste, der aktuell verfügbaren Scopes dar.
 | ` impersonieren ` |  Impersonieren  |   Aktionen können im Namen eines untergeordneten Partners ausgeführt werden.  |
 | ` openid ` |  Benutzer-Identität überprüfen  |   Die Anmeldung bei Europace kann angefordert werden, um die Identität des Benutzers zu überprüfen.  |
 | ` profile ` |  Benutzerprofil lesen  |   Profildaten (Vor- und Nachname, Benutzername, E-Mail und Avatar-Bild) des angemeldeten Benutzers können abgerufen werden.  |
+
+Notwenidige Scopes, um die APIs nutzen zu können.
+| API | Scopes |
+|-------|------|
+|Kundenangaben||
+|Vorgänge||
+|Ereignisse||
+|Angebote||
+|Anträge|` baufinanzierung:echtgeschaeft `, ` baufinanzierung:antrag:lesen ` ,` baufinanzierung:antrag:schreiben `, ` baufinanzierung:produktkonfiguration:lesen `, ` openid `,` baufinanzierung:produkt:lesen `|
+|Unterlagen||
+|Dokumente||
+|Report||
+|Partner||
