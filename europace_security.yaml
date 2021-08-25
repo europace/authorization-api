@@ -79,6 +79,9 @@ flows:
         ## Produktanbieter verändern
         für Product-Cockpit
 
+      baufinanzierung:passende-vorschlaege:ermitteln: |
+        ## passende Vorschläge ermitteln
+
       privatkredit:angebot:ermitteln: |
         ## KreditSmart-Angebote ermitteln
         Ratenkredit-Angebote und -Schaufensterkonditionen können ermittelt werden.
