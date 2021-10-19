@@ -1,0 +1,135 @@
+openapi: 3.0.3
+tags:
+  - name: Silent-Sign-In
+info:
+  title: ssi-api
+  version: v1.0
+  description: Die Silent-Sign-In API von Europace ermöglicht das Anmelden von Benutzern durch einen OAuth-Client und den Aufruf der Europace-Benutzeroberfläche im Browser.
+  contact:
+    name: Europace AG
+    url: 'http://docs.api.europace.de'
+    email: info@europace.de
+  termsOfService: 'https://docs.api.europace.de/nutzungsbedingungen/'
+servers:
+  - url: 'https://www.europace2.de/authorize'
+    description: Production Server
+externalDocs:
+  url: 'https://docs.api.europace.de/common/authentifizierung/ssi-api/'
+paths:
+  /silent-sign-in:
+    parameters: []
+    post:
+      summary: create Silent-Sign-In OTP
+      operationId: create-ssi-otp
+      responses:
+        '200':
+          description: Created - otp wurde erzeugt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/otp'
+              examples:
+                example-1:
+                  value:
+                    otp: 05448389-4014-49af-896e-15b60a07ae8b
+        '401':
+          description: Unauthorized - access-token ist abgelaufen
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '403':
+          description: Forbidden - Scopes silent-sign-on ist nicht vorhanden
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      description: |-
+        Erzeugt on-time-password (otp) aus dem access-token für den Browser-Redirect. 
+
+        Ist der OAuth-Client auf einer Organisation registriert, so muss für den Benutzer mit dem Client impersoniert werden. Als Benutzer des Silent-Sign-In wird der Subject des access-token verwendet. Als Sicherheit wird das Subject zusätzlich als Parameter erwartet und geprüft. 
+      security:
+        - europace_oauth2: []
+      tags:
+        - Silent-Sign-In
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: subject
+          description: subject to sign-in
+    get:
+      summary: open Silent-Sign-In
+      operationId: open-ssi
+      responses:
+        '303':
+          description: See Other
+          headers:
+            Location:
+              schema:
+                type: string
+                format: uri-reference
+              description: redirect_uri with Session
+        '403':
+          description: Forbidden - otp ungültig
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      parameters:
+        - schema:
+            type: string
+            example: /uebersicht
+            format: uri-reference
+          in: query
+          name: redirect_uri
+          description: relative uri von Europace
+          required: true
+        - schema:
+            type: string
+            format: uuid
+            minLength: 32
+            maxLength: 32
+          in: query
+          name: otp
+          description: one-time-password
+          required: true
+        - schema:
+            type: string
+          in: query
+          name: subject
+          description: subject to sign-in
+      description: 'Browser-Endpunkt, der das One-Time-Password prüft und auf den angeforderten Endpunkt mit einer Europace-Session umlenkt.'
+      tags:
+        - Silent-Sign-In
+components:
+  securitySchemes:
+    europace_oauth2:
+      type: http
+      scheme: bearer
+      description: 'partner:login:silent-sign-in'
+  schemas:
+    otp:
+      title: one-time-password
+      type: object
+      description: One-Time-Password für Silent-Sign-In
+      properties:
+        otp:
+          type: string
+          format: uuid
+          minLength: 32
+          maxLength: 32
+          description: one-time-password
+      x-examples: {}
+    Error:
+      title: Error
+      type: object
+      properties:
+        message:
+          type: string
+        traceId:
+          type: string
+      required:
+        - message
+security:
+  - europace_oauth2: []
