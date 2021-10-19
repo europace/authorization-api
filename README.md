@@ -52,7 +52,7 @@ Bitte wende dich an <a href="mailto:helpdesk@europace2.de?subject=Registrierung 
 
 Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir dir deinen Client umgehend und stellen dir die Client-ID und das Client-Secret in deiner persönlichen Linkliste in Europace zur Verfügung.
 
-![Linksammlung.png](https://raw.githubusercontent.com/europace/authorization-api/master/docs/img/Linksammlung.png "Linksammlung")
+![Linksammlung.png](https://docs.api.europace.de/Linksammlung.png "Linksammlung")
 
 Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) einverstanden erklärst.
 
