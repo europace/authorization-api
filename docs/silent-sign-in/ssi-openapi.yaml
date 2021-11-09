@@ -31,7 +31,7 @@ paths:
               examples:
                 example-1:
                   value:
-                    otp: 05448389-4014-49af-896e-15b60a07ae8b
+                    otp: EGSY53CGGSXZBWGMSPBZD2ILAKCF6J53
         '401':
           description: Unauthorized - access-token ist abgelaufen
           content:
