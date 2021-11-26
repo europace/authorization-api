@@ -87,7 +87,6 @@ paths:
           required: true
         - schema:
             type: string
-            format: uuid
             minLength: 32
             maxLength: 32
           in: query
@@ -116,7 +115,6 @@ components:
       properties:
         otp:
           type: string
-          format: uuid
           minLength: 32
           maxLength: 32
           description: one-time-password
