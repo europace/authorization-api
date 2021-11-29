@@ -1,63 +1,63 @@
 # Authorization API
 
-Die Authorization-API stellt die Authentifizierung bei Europace für APIs zur Verfügung. Sie ist eine zwingende Voraussetzung zur Verwendung von Europace APIs.
+The Authorization API provides authentication to Europace for APIs. It is a mandatory requirement for using Europace APIs.
 
 
-![Vertrieb](https://img.shields.io/badge/-Vertrieb-lightblue)
-![Produktanbieter](https://img.shields.io/badge/-Produktanbieter-lightblue)
-![Baufinanzierung](https://img.shields.io/badge/-Baufinanzierung-lightblue)
-![Privatkredit](https://img.shields.io/badge/-Privatkredit-lightblue)
+![advisors](https://img.shields.io/badge/-advisors-lightblue)
+![loan providers](https://img.shields.io/badge/-loanProviders-lightblue)
+![mortgage loans](https://img.shields.io/badge/-mortgageLoans-lightblue)
+![consumer loans](https://img.shields.io/badge/-consumerLoans-lightblue)
 
-[![Authentication](https://img.shields.io/badge/Auth-OAuth2-green)](https://github.com/europace/authorization-api)
+[![authentication](https://img.shields.io/badge/Auth-OAuth2-green)](https://github.com/europace/authorization-api)
 
 [![GitHub release](https://img.shields.io/github/v/release/europace/authorization-api)](https://github.com/europace/authorization-api/releases)
 [![Pattern](https://img.shields.io/badge/Pattern-Tolerant%20Reader-yellowgreen)](https://martinfowler.com/bliki/TolerantReader.html)
 
-## Dokumentation
+## Documentation
 [![YAML](https://img.shields.io/badge/OAS-HTML_Doc-lightblue)](https://europace.github.io/authorization-api/oas-doc.html)
 [![YAML](https://img.shields.io/badge/OAS-YAML-lightgrey)](https://github.com/europace/authorization-api/blob/master/authorization.yaml)
 
-**weitere Artikel** 
+**related articles** 
 * Migrationsguide [deutsch](https://docs.api.europace.de/common/authentifizierung/oauth-migrationsguide) / [english](https://docs.api.europace.de/common/authentifizierung/oauth-migrationsguide_en).
-* HowTo implement [auth-code-flow (english)](https://docs.api.europace.de/common/authentifizierung/oauth-code-flow_en/)
+* HowTo implement [auth-code-flow](https://docs.api.europace.de/common/authentifizierung/oauth-code-flow_en/)
 
-## Anwendungsfälle
-- Benutzer anmelden, um Europace-APIs zu verwenden
+## Usecases
+- login user to use europace-apis with his identity
 
-## Schnellstart
-Damit du unsere APIs und deinen Anwendungsfall schnellstmöglich testen kannst, haben wir eine [Postman-Collection](https://github.com/europace/api-schnellstart) für dich zusammengestellt.
+## Quickstart
+To test our APIs and your use case as quickly as possible, we've put together a [Postman Collection](https://github.com/europace/api-schnellstart) for you.
 
-## Wie benutze ich OAuth2?
+## How to use OAuth2?
 
-Alle Europace-APIs sind zugangsbeschränkt, d.h. um sie verwenden zu können muss zuvor eine Anmeldung (Authentifizierung) bei Europace erfolgen.
+All Europace APIs are access restricted, i.e. in order to use them a login (authentication) to Europace has to be done first.
 
-Dabei müssen folgende Schritte durchlaufen werden:
-- Einmalig musst du deinen Client in Europace registrieren lassen, woraufhin du die `Client_ID` und das `Client-Secret` für den Client erhältst
-- Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen `Access_Token` zu erhalten. Die meisten HTTP Clients unterstützen OAuth2 bereits und lassen sich mit diesen Parametern konfigurieren.
-- Mit dem `Access_Token` als Bearer-Token kannst du Requests an den Europace APIs durchführen.
-Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
+Follow these steps:
+- you have to register your client once in Europace, whereupon you will receive the `Client_ID` and the `Client-Secret` for the client.
+- To log in to Europace, call `https://api.europace.de/auth/token` with the `Client_ID` and the `Client_Secret` as Basic-Auth to get an `access_token`. Most HTTP clients already support OAuth2 and can be configured with these parameters.
+- With the `access_token` as a bearer token you can make requests to the Europace APIs.
+Request header variable: `Authorization: Bearer [access_token]`
 
-## Wie bekomme ich einen Client registriert?
+## How to register your client?
 
-<a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hallo,%0D%0Abitte%20registriert%20einen%20API-Client%20für%20mich.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Beschreibung:%0D%0Atechnische%20Kontakt-Email-Adresse:%0D%0Akurze%20Beschreibung%20des%20Anwendungsfalls:%0D%0Abenötigte%20Scopes:%0D%0A%0D%0AVielen%20Dank">zur Client-Registrierung</a>
+<a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hallo,%0D%0Abitte%20registriert%20einen%20API-Client%20für%20mich.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Beschreibung:%0D%0Atechnische%20Kontakt-Email-Adresse:%0D%0Akurze%20Beschreibung%20des%20Anwendungsfalls:%0D%0Abenötigte%20Scopes:%0D%0A%0D%0AVielen%20Dank">apply client-registration</a>
 
 
-Bitte wende dich an <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hallo,%0D%0Abitte%20registriert%20einen%20API-Client%20für%20mich.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Beschreibung:%0D%0Atechnische%20Kontakt-Email-Adresse:%0D%0Akurze%20Beschreibung%20des%20Anwendungsfalls:%0D%0Abenötigte%20Scopes:%0D%0A%0D%0AVielen%20Dank">helpdesk@europace.de</a> mit folgenden Daten:
-- EP2-PartnerId
-- Client-Name
-- Client-Beschreibung:
-- Kontakt-Email-Adresse für betriebliche Rückfragen
-- Kurze Beschreibung des Anwendungsfalls (Ziel)
-- benötigte Scopes
+Please contact <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hello,%0D%0Please%20register%20an%20API-Client%20for%20me. %0D%0A%0D%0APartnerID:%0D%0AClientName:%0D%0AClientDescription:%0D%0Atechnical%20contact email address:%0D%0Short%20description%20of%20the%20application:%0D%0Required%20Scopes:%0D%0A%0D%0AVever%20Thanks">helpdesk@europace.de</a> with the following data:
+- EP2 PartnerId
+- Client name
+- Client Description:
+- Contact email address for operational queries
+- Short description of the use case (goal)
+- required scopes
 
-Nach einer kurzen Prüfung beim Eigentümer (Europace Partner) registrieren wir dir deinen Client umgehend und stellen dir die Client-ID und das Client-Secret in deiner persönlichen Linkliste in Europace zur Verfügung.
+After a short check with the owner (Europace partner) we will register your client immediately and provide you with the client ID and client secret in your personal link list in Europace.
 
 ![Linksammlung.png](https://docs.api.europace.de/Linksammlung.png "Linksammlung")
 
-Bitte beachte, dass du dich mit der Benutzung der APIs automatisch mit den [Europace API-Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) einverstanden erklärst.
+Please note that by using the APIs, you automatically agree to the [Europace API Terms of Use](https://docs.api.europace.de/nutzungsbedingungen/).
 
-## Wie bekomme ich einen Access-Token?
-Für die Anmeldung an Europace rufst du `https://api.europace.de/auth/token` mit der `Client_ID` und dem `Client_Secret` als Basic-Auth auf, um einen Access_Token zu erhalten.
+## How to get an access-token?
+To log in to Europace, call `https://api.europace.de/auth/token` with the `Client_ID` and the `Client_Secret` as Basic-Auth to get an Access_Token.
 
 Request:
 ```cURL
@@ -75,35 +75,35 @@ Response:
    "expires_in": 3600   }
 ```
 
-In diesem Fall wird ein Access-Token im Namen und im Auftrag des Partners erstellt an dem der Client registriert ist. Weitere Anwendungsfälle werden in “Alte Welt - neue Welt” behandelt.
+In this case, an access token is created in the name and on behalf of the partner to which the client is registered. Further use cases are discussed in "Old world - new world".
 
-Neben dem Grant-Type werden folgende Request-Parameter unterstützt:
+In addition to the grant type, the following request parameters are supported:
 
 - ##### Grant-Type (`grant_type`)
-  [OAuth2.0 Grant-Type][RFC6749#4], muss für den Client-Credentials-Flow `client_credentials` sein.
-- ##### Scopes (`scope`)
-  "` `"-separierte Liste von Scopes. Wird ein Subject angegeben muss `impersonieren` als Scope enthalten sein.
-  Angefragte Scopes werden entsprechend der Rechte des Akteurs und dem Client-Approval durch den Akteur eingeschränkt. Es ist möglich einen eingeschränkten Zugriff anzufragen, in dem man spezifische Scopes angibt. Ein Scope stellt eine Berechtigung zum Ausführen von Aktionen auf der Plattform dar. Werden keine Scopes angefragt ergibt sich der Scope aus den bei der Client-Registrierung hinterlegten Scopes. Die aktuell verfügbaren Scopes werden in einer [Übersicht](https://github.com/europace/authorization-api/blob/master/docs/scopes.md) gepflegt.
-- ##### Akteur (`actor`)
-  Partner-Id des Partners in dessen Auftrag der Client agiert, es muss ein
-  Client-Approval des Akteurs für den Client vorliegen. Aktuell wird der Client-Approval automatisch bei der Registrierung für den Aktuer und alle Subjects im Zugriffsbereich des Clients erteilt .
+  [OAuth2.0 Grant-Type][RFC6749#4], must be `client_credentials` for client credentials flow.
+- ##### Scopes (`scope`).
+  "` `"-separated list of scopes. If a subject is specified, `impersonate` must be included as a scope.
+  Requested scopes are restricted according to the actor's permissions and the client's approval by the actor. It is possible to request restricted access by specifying specific scopes. A scope represents an authorization to perform actions on the platform. If no scopes are requested, the scope results from the scopes stored during client registration. The currently available scopes are maintained in an [Overview](https://github.com/europace/authorization-api/blob/master/docs/scopes.md).
+- ##### Actor (`actor`)
+  Partner id of the partner on whose behalf the client is acting, there must be a
+  client-approval of the actor for the client. Currently the client-approval is granted automatically during registration for the actor and all subjects in the access area of the client.
 - ##### Subject (`subject`)
-  Partner-Id des Partners in dessen Namen der Client agiert. Das Subject muss dem Akteur untergeordnet sein.
+  Partner id of the partner on whose behalf the client acts. The subject must be subordinate to the actor.
 
-## Wie rufe ich eine API mit Access-Token auf?
-Mit dem Access_Token als Bearer-Token kannst du Requests an den Europace APIs durchführen.
-Request-Header-Variable:  `Authorization: Bearer [Access_Token]`
+## How to call an API with access-token?
+With the Access_Token as a Bearer token you can make requests to the Europace APIs.
+Request header variable: `Authorization: Bearer [access_token]`
 
-Am Beispiel der Vorgaenge-API in curl:
+Using the example of the process API in curl:
 ```cURL
 curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer [Access_Token]
+--header 'Authorization: Bearer [access_token]
 ```
 
-## Wie authentifiziere ich verschiedene Benutzer mit einem Client? (Impersionieren)
+## How to authenticate different users with one client? (Impersonation)
 
-Das impersionierte OAuth2-Verfahren wird dann verwendet, wenn die API den konkreten Benutzer benötigt und man nicht für jeden Benutzer einen Client registrieren möchte. Es reicht einen Client für die Organisation zu haben, der als Generalsschlüssel fungiert und mit dem Benutzer, auf die die Organisation Zugriff hat, angemeldet werden können.
+The imperseded OAuth2 method is used when the API needs the specific user and you don't want to register a client for each user. It is enough to have one client for the organization that acts as a general key and can be used to log in users that the organization has access to.
 
 ```cURL
 curl --location --request POST 'https://api.europace.de/auth/token' \
@@ -111,22 +111,21 @@ curl --location --request POST 'https://api.europace.de/auth/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=client_credentials' \
 --data-urlencode 'scope=impersonieren baufinanzierung:echtgeschaeft baufinanzierung:vorgang:lesen baufinanzierung:ereignis:lesen baufinanzierung:antrag:lesen' \
---data-urlencode 'subject=[anzumeldende PartnerID]' \
---data-urlencode 'actor=[registrierte PartnerID]'
+--data-urlencode 'subject=[to be login PartnerID]' \
+--data-urlencode 'actor=[registered PartnerID]'
 ```
 
-
-Parameter | Beschreibung |
+Parameters | Description |
 --------- | :--- |
-Subject   | die PartnerID des anzumeldenden Benutzers
-Actor     | die PartnerID des registrierten Clients<br/><br/>**Hinweis**: Die Actor-Partnerid muss in der Partnermanagementstruktur über der Subject-Partnerid angeordnet sein, da sonst die notwendigen Zugriffsrechte fehlen. Es können beliebig viele Ebenen zwischen den Partnerids liegen.
-Scope     | benötigten Scopes des Tokens<br/><br/>**Hinweis**: Der Scope `impersonieren` muss immer enthalten sein. Alle angegebenen Scopes müssen beim Client aktiviert sein.
+Subject | the PartnerID of the user to be registered
+Actor | the partnerID of the registered client<br/><br/>**Note**: The Actor partnerid must be placed above the Subject partnerid in the partner management structure, otherwise the necessary access rights are missing. There can be any number of scopes between the partnerids.
+Scope | required scopes of the token<br/><br/>**Note**: The scope `impersonate` must always be included. All specified scopes must be enabled at the client.
 
-## Nutzungsbedingungen
-Die APIs werden unter folgenden [Nutzungsbedingungen](https://docs.api.europace.de/nutzungsbedingungen/) zur Verfügung gestellt.
+## Terms of use
+The APIs are made available under the following [Terms of Use](https://docs.api.europace.de/nutzungsbedingungen/).
 
 ## Support
-Bei Fragen oder Problemen kannst du dich an devsupport@europace2.de wenden.
+If you have any questions or problems, you can contact devsupport@europace2.de.
 
 [JWT]: https://tools.ietf.org/html/rfc7519
 [ASCII]: http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-006.pdf

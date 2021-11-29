@@ -4,7 +4,7 @@ tags:
 info:
   title: ssi-api
   version: v1.0
-  description: Die Silent-Sign-In API von Europace ermöglicht das Anmelden von Benutzern durch einen OAuth-Client und den Aufruf der Europace-Benutzeroberfläche im Browser.
+  description: Europace's Silent Sign-In API allows users to sign in through an OAuth client and invoke the Europace user interface in the browser.
   contact:
     name: Europace AG
     url: 'http://docs.api.europace.de'
@@ -12,7 +12,7 @@ info:
   termsOfService: 'https://docs.api.europace.de/nutzungsbedingungen/'
 servers:
   - url: 'https://www.europace2.de/authorize'
-    description: Production Server
+    description: production server
 externalDocs:
   url: 'https://docs.api.europace.de/common/authentifizierung/ssi-api/'
 paths:
@@ -23,7 +23,7 @@ paths:
       operationId: create-ssi-otp
       responses:
         '200':
-          description: Created - otp wurde erzeugt
+          description: Created - otp created
           content:
             application/json:
               schema:
@@ -33,21 +33,21 @@ paths:
                   value:
                     otp: EGSY53CGGSXZBWGMSPBZD2ILAKCF6J53
         '401':
-          description: Unauthorized - access-token ist abgelaufen
+          description: Unauthorized - access-token has expired
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
         '403':
-          description: Forbidden - Scopes silent-sign-on ist nicht vorhanden
+          description: Forbidden - Scopes silent-sign-on is not present
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
       description: |-
-        Erzeugt on-time-password (otp) aus dem access-token für den Browser-Redirect. 
+        Generates on-time-password (otp) from the access-token for the browser redirect. 
 
-        Ist der OAuth-Client auf einer Organisation registriert, so muss für den Benutzer mit dem Client impersoniert werden. Als Benutzer des Silent-Sign-In wird der Subject des access-token verwendet. Als Sicherheit wird das Subject zusätzlich als Parameter erwartet und geprüft. 
+        If the OAuth client is registered on an organization, then impersonation must be done for the user with the client. The subject of the access-token is used as the user of the silent sign-in. As security, the subject is also expected and checked as a parameter. 
       security:
         - europace_oauth2: []
       tags:
@@ -58,6 +58,7 @@ paths:
           in: query
           name: subject
           description: subject to sign-in
+          required: true
     get:
       summary: open Silent-Sign-In
       operationId: open-ssi
@@ -71,7 +72,7 @@ paths:
                 format: uri-reference
               description: redirect_uri with Session
         '403':
-          description: Forbidden - otp ungültig
+          description: Forbidden - otp invalid
           content:
             application/json:
               schema:
@@ -83,7 +84,7 @@ paths:
             format: uri-reference
           in: query
           name: redirect_uri
-          description: relative uri von Europace
+          description: relative uri from Europace
           required: true
         - schema:
             type: string
@@ -98,7 +99,8 @@ paths:
           in: query
           name: subject
           description: subject to sign-in
-      description: 'Browser-Endpunkt, der das One-Time-Password prüft und auf den angeforderten Endpunkt mit einer Europace-Session umlenkt.'
+          required: true
+      description: Browser endpoint that checks the one-time password and redirects to the requested endpoint with a Europace session.
       tags:
         - Silent-Sign-In
 components:

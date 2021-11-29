@@ -1,76 +1,76 @@
 # Silent-Sign-In API
 
-Die Silent-Sign-In API von Europace ermöglicht das Anmelden von Benutzern durch einen OAuth-Client und den Aufruf der Europace-Benutzeroberfläche im Browser.
+Europace's Silent Sign-In API allows users to sign in through an OAuth client and invoke the Europace user interface in the browser.
 
 ---- 
-![Vertrieb](https://img.shields.io/badge/-Vertrieb-lightblue)
-![Produktanbieter](https://img.shields.io/badge/-Produktanbieter-lightblue)
-![Baufinanzierung](https://img.shields.io/badge/-Baufinanzierung-lightblue)
-![Privatkredit](https://img.shields.io/badge/-Privatkredit-lightblue)
+![advisor](https://img.shields.io/badge/-advisor-lightblue)
+![loanProvider](https://img.shields.io/badge/-loanProvider-lightblue)
+![mortgageLoans](https://img.shields.io/badge/-mortgageLoans-lightblue)
+![consumerLoans](https://img.shields.io/badge/-consumerLoans-lightblue)
 
 [![Authentication](https://img.shields.io/badge/Auth-OAuth2-green)](https://docs.api.europace.de/baufinanzierung/authentifizierung/)
 ![Release](https://img.shields.io/badge/release-1.0-blue)
 
-## Anwendungsfälle der API
+## Usecases
 
-- einen Benutzer anmelden und Europace nahtlos in einem iFrame oder neuen Browser-Tab anzeigen
+- Log in a user and display Europace seamlessly in an iFrame or new browser tab.
 
 ## Dokumentation
 [![YAML](https://img.shields.io/badge/OAS-HTML_Doc-lightblue)](https://europace.github.io/authorization-api/ssi.html)
 [![YAML](https://img.shields.io/badge/OAS-YAML-lightgrey)](https://github.com/europace/authorization-api/blob/master/docs/silent-sign-in/ssi-openapi.yaml)
 
-Feedback und Fragen sind als [GitHub Issue](https://github.com/europace/authorization-api/issues/new) willkommen.          |
+Feedback and questions are welcome as [GitHub Issue](https://github.com/europace/authorization-api/issues/new).
 
 
-## Ablauf des Silent-Sign-In
+## Steps of the Silent Sign-In
 ![seq-ssi](seq_ssi.png)
 
-## Beispiel: Benutzer anmelden und Vorgang öffnen
+## Example: Log on user and open process
 
-### Schritt 1 - Benutzer anmelden
-Der Schritt ist optional, wenn bereits ein User-Access-Token vorliegt.
+### Step 1 - Login user
+The step is optional if a user access token already exists.
 
-Um die API verwenden zu können, benötigt der OAuth2-Client folgende Scopes:
+To use the API, the OAuth2 client requires the following scopes:
 | Scope                                  | API-Usecase                                                      |
 | -------------------------------------- | ---------------------------------------------------------------- |
-| ` partner:login:silent-sign-in `       |   Silent-Sign-In erlaubt                                         |
-| ` impersonieren `                      |   Andere Benutzer als subject anmelden       
+| ` partner:login:silent-sign-in `       |   Silent sign-in allowed                                         |
+| ` impersonieren `                      |   Log in other users as subject       
 
-> **Wichtig:** der Access-Token muss im Namen des Benutzers ausgestellt sein. 
-Um diesen als Client zu erzeugen, kann das Impersonieren angewendet werden. Siehe: [Authorization-API-Impersonieren](https://docs.api.europace.de/common/authentifizierung/authorization-api/#wie-authentifiziere-ich-verschiedene-benutzer-mit-einem-client-impersionieren)
+> The access token must be issued in the name of the user. 
+Impersonation can be applied to create this as a client. See: [Authorization API Impersonate](https://docs.api.europace.de/common/authentifizierung/authorization-api/#wie-authentifiziere-ich-verschiedene-benutzer-mit-einem-client-impersionieren)
 
-### Schritt 2 - One-Time-Password erzeugen
-Aus Sicherheitgründen wird ein One-Time-Password für den Aufruf von Europace über den Browser verwendet.
+### Step 2 - Generate one-time password
+For security reasons, a one-time password is used to access Europace via the browser.
 
-Beispiel-Request:
+Example-request:
 ``` http
 POST /authorize/silent-sign-in?subject=[user-partner-id] HTTP/1.1
 Host: www.europace2.de
 Authorization: Bearer [user-access-token]
 ```
 
-Beispiel-Resonse:
+Example-resonse:
 ``` json
 {
   "otp": "05448389A4014F49AFC896EB15B60A07AE8B"
 }
 ```
 
-### Schritt 3 - Europace öffnen
-Mit dem OTP kann nun Europace geöffnet werden. Um den Vorgang AB45C2 direkt anzuzeigen, wird die redirect_uri mit `/vorgang/oeffne/[vorgangsnummer]` übergeben werden.
+### Step 3 - Open Europace in the browser
+Europace can now be opened with the OTP. To display the process AB45C2 directly, the redirect_uri will be passed with `/vorgang/oeffne/[vorgangsnummer]`.
 
-Beispiel-Request:
+Example-request:
 ``` http
 GET /authorize/silent-sign-in?subject=[user-partner-id]&redirect_uri=/vorgang/oeffne/AB45C2&otp=[otp] HTTP/1.1
 Host: www.europace2.de
 ```
 
-Beispiel-Resonse:
-Redirect mit EP-Session auf `https://www.europace2.de/[redirect_uri]`
+Example-response: \
+Redirect with EP session to `https://www.europace2.de/[redirect_uri]`
 
-Liste der Redirect_uris:
+List of Redirect_uris:
 * `/uebersicht` (default)
 * `/vorgangsmanagement`
 * `/vorgang/oeffne/[vorgangsnummer]`
-* `/antragsuebersicht` (nur für Produktanbieter)
+* `/antragsuebersicht` (for product providers only)
 * `/partnermanagement` 
