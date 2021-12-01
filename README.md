@@ -18,7 +18,7 @@ The Authorization API provides authentication to Europace for APIs. It is a mand
 [![YAML](https://img.shields.io/badge/OAS-YAML-lightgrey)](https://github.com/europace/authorization-api/blob/master/authorization.yaml)
 
 **related articles** 
-* Migrationsguide [deutsch](https://docs.api.europace.de/common/authentifizierung/oauth-migrationsguide) / [english](https://docs.api.europace.de/common/authentifizierung/oauth-migrationsguide_en).
+* [Migrationsguide](https://docs.api.europace.de/common/authentifizierung/oauth-migrationsguide_en).
 * HowTo implement [auth-code-flow](https://docs.api.europace.de/common/authentifizierung/oauth-code-flow_en/)
 
 ## Usecases
