@@ -42,7 +42,7 @@ Request header variable: `Authorization: Bearer [access_token]`
 <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hallo,%0D%0Abitte%20registriert%20einen%20API-Client%20für%20mich.%0D%0A%0D%0APartnerID:%0D%0AClient-Name:%0D%0AClient-Beschreibung:%0D%0Atechnische%20Kontakt-Email-Adresse:%0D%0Akurze%20Beschreibung%20des%20Anwendungsfalls:%0D%0Abenötigte%20Scopes:%0D%0A%0D%0AVielen%20Dank">apply client-registration</a>
 
 
-Please contact <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hello,%0D%0Please%20register%20an%20API-Client%20for%20me. %0D%0A%0D%0APartnerID:%0D%0AClientName:%0D%0AClientDescription:%0D%0Atechnical%20contact email address:%0D%0Short%20description%20of%20the%20application:%0D%0Required%20Scopes:%0D%0A%0D%0AVever%20Thanks">helpdesk@europace.de</a> with the following data:
+Please contact <a href="mailto:helpdesk@europace2.de?subject=Registrierung API-Client&body=Hello,%0D%0Please%20register%20an%20API-Client%20for%20me. %0D%0A%0D%0APartnerID:%0D%0AClientName:%0D%0AClientDescription:%0D%0Atechnical%20contact email address:%0D%0Short%20description%20of%20the%20application:%0D%0Required%20Scopes:%0D%0A%0D%0AVever%20Thanks">helpdesk@europace2.de</a> with the following data:
 - EP2 PartnerId
 - Client name
 - Client Description:
