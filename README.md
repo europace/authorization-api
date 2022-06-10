@@ -98,7 +98,7 @@ Using the example of the process API in curl:
 ```cURL
 curl --location --request GET 'https://api.europace2.de/v2/vorgaenge' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer [access_token]
+--header 'Authorization: Bearer [access_token]'
 ```
 
 ## How to authenticate different users with one client? (Impersonation)
