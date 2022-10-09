@@ -37,7 +37,21 @@ paths:
           application/x-www-form-urlencoded:
             schema:
               $ref: '#/components/schemas/loginRequest'
-            examples: {}
+            examples:
+              client-credential-flow:
+                value:
+                  grant_type: client_credentials
+              client-credential-flow impersionation:
+                value:
+                  grant_type: client_credentials
+                  scope: no-access impersonieren
+                  subject: ABC12
+                  actor: XYZ54
+              auth-code-flow:
+                value:
+                  grant_type: code
+                  code: zJ0UhYgeOPInCons
+                  redirect: 'https://myFinanceApp.com/oidc'
         description: ''
       tags:
         - Auth
@@ -95,6 +109,26 @@ components:
     loginResponse:
       title: loginResponse
       type: object
+      description: |-
+        Response of a succesful login. 
+        When authentication-code-flow: the additional id_token with user-information will be delivered
+      x-examples:
+        client_credential_flow:
+          access_token: I6MTU3...wet46
+          token_type: Bearer
+          expires_in: 3600
+          scope: no-access
+        client_credential_flow_impersonation:
+          access_token: I6MTU3...wet46
+          token_type: Bearer
+          expires_in: 3600
+          scope: no-access impersonate
+        authentication_code_flow:
+          access_token: I6MTU3...wet46
+          token_type: Bearer
+          id_token: I6MTU3...dry46
+          expires_in: 3600
+          scope: no-access openid profile
       properties:
         access_token:
           type: string
@@ -108,42 +142,72 @@ components:
           description: Validity period in seconds
         scope:
           type: string
-          description: Valid scopes of the access token
+          description: 'Valid scopes of the access token to know, what is possible for your app.'
+        id_token:
+          type: string
+          description: id_token contains authenticated sub and if scope=profile the user_profile information
       required:
         - access_token
         - token_type
         - expires_in
         - scope
-      x-examples:
-        Beispiel Response:
-          access_token: I6MTU3...wet46
-          token_type: BEARER
-          expires_in: 3600
-          scope: no-access
-      description: Response of a successful login
     loginRequest:
       title: loginRequest
       type: object
       description: |-
-        Parameters for the login. In the simplest case grant_type=client_credential is passed. 
+        Parameters for the login. 
 
-        When impersonating, subject, actor and impersonate as scope as well as all other required scopes must be specified.
-      x-examples: {}
+        When client-credential-flow: only `grant_type=client_credential` required.
+
+        When authentication-code-flow: `grant_type=code`, `code` and `redirect` are required.
+
+        When client-credential-flow with impersonation: `subject`, `actor` and `impersonate` as `scope` as well as all other required scopes must be specified.
+      x-examples:
+        client_credential_flow:
+          grant_type: client_credentials
+        authentication_code_flow:
+          grant_type: code
+          code: zJ0UhYgeOPInCons
+          redirect: 'https://myFinanceApp.com/oidc'
+        client_credential_flow_impersonation:
+          grant_type: client_credentials
+          scope: no-access impersonieren
+          subject: ABC12
+          actor: XYZ54
       properties:
         grant_type:
           type: string
           default: client_credentials
-          description: Must be `client_credentials` for the client credentials flow.
+          description: Must be `client_credentials` for the client-credentials-flow and `code` for the authenticaton-code-flow.
+          enum:
+            - client_credentials
+            - code
         scope:
           type: string
           default: no-access impersonieren
-          description: 'space-separated list of scopes. If a subject is specified, impersonate must be included as a scope. Requested scopes are restricted according to the actor''s permissions and the client''s approval by the actor. It is possible to request restricted access by specifying specific scopes. A scope represents an authorization to perform actions on the platform. If no scopes are requested, the scope is derived from the scopes stored during client registration. The currently available scopes are maintained in an overview.'
+          description: 'space-separated list of scopes. Only used if the grant_type is client_credentials. If a subject is specified, imperson  ate must be included as a scope. Requested scopes are restricted according to the actor''s permissions and the client''s approval by the actor. It is possible to request restricted access by specifying specific scopes. A scope represents an authorization to perform actions on the platform. If no scopes are requested, the scope is derived from the scopes stored during client registration. The currently available scopes are maintained in an overview.'
         subject:
           type: string
           description: Partner id of the partner on whose behalf the client acts. The subject must be subordinate to the actor.
+          minLength: 5
+          maxLength: 5
+          example: ABC12
         actor:
           type: string
           description: 'Partner id of the partner on whose behalf the client is acting, there must be a client approval of the actor for the client.'
+          minLength: 5
+          maxLength: 5
+          example: XYZ54
+        code:
+          type: string
+          example: zJ0UhYgeOPInCons
+          minLength: 16
+          maxLength: 16
+          description: code transfered to your registered callback uri
+        redirect:
+          type: string
+          format: uri
+          description: your registered and requested callback uri what is redirected after user authentication process
       required:
         - grant_type
     error:
@@ -158,3 +222,5 @@ components:
         - error_description
         - error
       description: Content error message in addition to HTTP error code.
+tags:
+  - name: Auth
