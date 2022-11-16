@@ -204,7 +204,7 @@ components:
           minLength: 16
           maxLength: 16
           description: code transfered to your registered callback uri
-        redirect:
+        redirect_uri:
           type: string
           format: uri
           description: your registered and requested callback uri what is redirected after user authentication process
