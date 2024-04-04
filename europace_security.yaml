@@ -55,7 +55,7 @@ flows:
         ## BaufiSmart-Anträge lesen
       baufinanzierung:antrag:schreiben: |
         ## BaufiSmart-Anträge verändern
-        Der Antragsstatus und der Sachbearbeiter können verändert sowie die Produktanbieter-Renferenz ergänzt werden.
+        Der Antragsstatus und der Sachbearbeiter können verändert sowie die Produktanbieter-Referenz ergänzt werden.
       
       baufinanzierung:produktkonfiguration:lesen: |
         ## Produktkonfiguration lesen
@@ -78,6 +78,12 @@ flows:
       baufinanzierung:produktanbieter:schreiben: |
         ## Produktanbieter verändern
         für Product-Cockpit
+      baufinanzierung:passende-vorschlaege:ermitteln: |
+        ## Passende Vorschläge ermitteln
+        für Passende Vorschläge API
+      baufinanzierung:baufi-passt:konfigurieren: |
+        ## BaufiPasst konfigurieren
+        für BaufiPasst Frontend
 
       privatkredit:angebot:ermitteln: |
         ## KreditSmart-Angebote ermitteln
