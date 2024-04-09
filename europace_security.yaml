@@ -35,7 +35,7 @@ flows:
         Ermöglicht das öffnen von Europace im Browser ohne Passwortabfrage.
 
       report:rohdaten:lesen: |
-        ## Vertriebs-Rohdaten-Report abrufen
+        ## Vertriebs-Reports abrufen
       report:produktanbieter:lesen: |
         ## Produktanbieter-Report abrufen
 
