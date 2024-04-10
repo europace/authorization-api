@@ -78,10 +78,8 @@ flows:
       baufinanzierung:produktanbieter:schreiben: |
         ## Produktanbieter verändern
         für Product-Cockpit
-      baufinanzierung:passende-vorschlaege:ermitteln: |
-        ## Passende Vorschläge ermitteln
-        für Passende Vorschläge API
-      baufinanzierung:baufi-passt:konfigurieren: |
+
+      baufi-passt:konfiguration:schreiben: |
         ## BaufiPasst konfigurieren
         für BaufiPasst Frontend
 
