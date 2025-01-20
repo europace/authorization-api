@@ -56,7 +56,7 @@ flows:
       baufinanzierung:antrag:schreiben: |
         ## BaufiSmart-Anträge verändern
         Der Antragsstatus und der Sachbearbeiter können verändert sowie die Produktanbieter-Renferenz ergänzt werden.
-      
+
       baufinanzierung:produktkonfiguration:lesen: |
         ## Produktkonfiguration lesen
         für Product-Cockpit
@@ -119,6 +119,22 @@ flows:
       unterlagen:freigabe:schreiben: |
         ## Freigegebene Unterlagen aktualisieren
         Der Status einer freigegeben Unterlagen kann verändert werden, um aus Produktanbietersicht den Empfang der Unterlagen zu bestätigen.
+
+      provision:ep2:schreiben: |
+        ## Zugriff auf EP2-Forderungen
+        EP2-Forderungen können erstellt, verändert und der Status abgefragt werden
+      provision:ks:schreiben: |
+        ## Zugriff auf K-S-Forderungen
+        K-S-Forderungen können erstellt, verändert und der Status abgefragt werden
+      provision:com:schreiben: |
+        ## Zugriff auf COM-Forderungen
+        COM-Forderungen können erstellt, verändert und der Status abgefragt werden
+      provision:dbl:schreiben: |
+        ## Zugriff auf DBL-Forderungen
+        DBL-Forderungen können erstellt, verändert und der Status abgefragt werden
+      provision:eap:schreiben: |
+        ## Zugriff auf EAP-Forderungen
+        EAP-Forderungen können erstellt, verändert und der Status abgefragt werden
 
       impersonieren: |
         ## Impersonieren
