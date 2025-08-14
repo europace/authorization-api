@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Europace Silent-Sign-In API" />
+    <title>Europace Silent-Sign-In API</title>
+    <link href="https://unpkg.com/swagger-ui-dist@5.27.1/swagger-ui.css" rel="stylesheet" type="text/css">
+</head>
+<body style="margin:0 auto;">
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist@5.27.1/swagger-ui-bundle.js" crossorigin></script>
+<script src="https://unpkg.com/swagger-ui-dist@5.27.1/swagger-ui-standalone-preset.js" crossorigin></script>
+
+<script>
+    window.onload = function () {
+        // Build a system
+        window.ui = SwaggerUIBundle({
+            url: "https://raw.githubusercontent.com/europace/authorization-api/master/docs/silent-sign-in/ssi-openapi.yaml",
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            maxDisplayedTags: 1,
+            operationsSorter: "alpha",
+            syntaxHighlight: true,
+            tryItOutEnabled: false,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [],
+            layout: "StandaloneLayout",
+        });
+    };
+</script>
+</body>
+</html>
