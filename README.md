@@ -57,7 +57,7 @@ After a short check with the owner (Europace partner) we will register your clie
 Please note that by using the APIs, you automatically agree to the [Europace API Terms of Use](https://docs.api.europace.de/nutzungsbedingungen/).
 
 ## How to get an access-token?
-To log in to Europace, call `https://api.europace.de/auth/token` with the `Client_ID` and the `Client_Secret` as Basic-Auth to get an Access_Token.
+To log in to Europace, call `https://api.europace.de/auth/token` with the `Client_ID` and the `Client_Secret` as Basic-Auth to get an Access_Token. Remeber to encode Client_ID and Client_Secret as Base64. 
 
 Request:
 ```cURL
